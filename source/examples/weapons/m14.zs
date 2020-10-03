@@ -360,7 +360,15 @@ class b_m14 : basestandardrifle {
 			Loop;
 
 		LayerGunBack:
-			M14G A 1;
+			M14G A 1 {
+				if (invoker.scopeClass is "B_Scope_10x") {
+					invoker.bLayerSight = 999;
+				}
+				else {
+					invoker.bLayerSight = 104;
+				}
+				//console.printf("LayerGunBack %i", invoker.scopeClass is "B_Scope_10x");
+			}
 			Loop;
 
 		NoHandsBack:
@@ -515,7 +523,7 @@ class M14ScopeOffset : ScopeOffset {
 	default {
 		Offset.WeaponClass "B_M14";
 		Offset.WeaponOverlay "B_Scope_10x";
-		Offset.OffY -7;
-		Offset.OffX -2;
+		Offset.OffY 0;
+		Offset.OffX 0;
 	}
 }

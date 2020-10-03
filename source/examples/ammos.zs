@@ -33,6 +33,106 @@ class DeformedShell : BRoundAmmo {
 	}
 }
 
+class B50BMGAmmo : BRoundAmmo {
+	default {
+		tag ".50 BMG round";
+		hdpickup.refid "b50";
+		hdpickup.bulk c_50bmg_bulk;
+		Inventory.Icon "BG50A7A3";
+	}
+
+	override string pickupmessage() {
+		return "Picked up a stray .50 BMG round.";
+	}
+
+	override void SplitPickup(){
+		SplitPickupBoxableRound(10, 50, "B_50BMG_Box", "BX50A0", "BG50A7A3");
+	}
+
+	states {
+		spawn:
+			BG50 A -1;
+			Stop;
+		dummy:
+			BX50 A -1;
+			stop;
+	}
+}
+
+class B50BMGBrass : BRoundShell {
+	default {
+		tag ".50 BMG brass";
+		HDPickUp.RefId "b5g";
+		HdPickup.Bulk c_556_spent_bulk;
+		Inventory.PickupMessage "Picked up some .50 BMG brass.";
+	}
+	states {
+		spawn:
+			BC50 A -1;
+			Stop;
+	}	
+}
+
+class B50BMGSpent : BRoundSpent {
+	default {
+		BRoundSpent.ShellClass "B50BMGBrass";
+		HDUPK.PickupType "B50BMGBrass";
+		HDUPK.PickupMessage "Picked up some .50 BMG brass.";
+	}
+	states {
+		spawn:
+			BC50 A 2 {
+				angle+=45;
+				if(floorz==pos.z&&!vel.z)A_Countdown();
+			}
+			Wait;
+
+		death:
+			BC50 A -1 {
+				actor p=spawn(invoker.shellClass,self.pos,ALLOW_REPLACE);
+				p.vel = self.vel;
+				p.vel.xy*=3;
+				p.angle=angle;
+				if(p.vel!=(0,0,0)){
+					p.A_FaceMovementDirection();
+					p.angle+=90;
+				}
+				destroy();
+			}
+			Stop;
+	}
+}
+
+class B_50BMG_Box : HDUPK {
+	default{
+		scale 0.8;
+		hdupk.amount 50;
+		hdupk.pickupsound "weapons/pocket";
+		hdupk.pickupmessage "Picked up some .50 BMG ammo.";
+		hdupk.pickuptype "B50BMGAmmo";
+	}
+	states{
+	spawn:
+		AB50 A -1;
+		Stop;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class B556Ammo : BRoundAmmo {
 	default {
 		tag "5.56x45mm round";

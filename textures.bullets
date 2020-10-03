@@ -173,3 +173,92 @@ sprite BS56A0, 34, 32 {
 	Offset 17, 32
 	Patch "graphics/bulletimages/556/556stack.png", 0, 0
 }
+
+// 50 BMG
+
+sprite BG50A1, 9, 9 {
+	XScale 8
+	YScale 8
+	Offset 4, 9
+	Patch "graphics/bulletimages/50bmg/full_A1.png", 0, 0
+}
+
+sprite BG50A8A2, 37, 9 {
+	XScale 8
+	YScale 8
+	Offset 19, 9
+	Patch "graphics/bulletimages/50bmg/full_A8A2.png", 0, 0
+}
+
+sprite BG50A7A3, 69, 9 {
+	XScale 8
+	YScale 8
+	Offset 35, 9
+	Patch "graphics/bulletimages/50bmg/full_A7A3.png", 0, 0
+}
+
+sprite BG50A4A6, 37, 9 {
+	XScale 8
+	YScale 8
+	Offset 18, 9
+	Patch "graphics/bulletimages/50bmg/full_A4A6.png", 0, 0
+}
+
+sprite BG50A5, 9, 9 {
+	XScale 8
+	YScale 8
+	Offset 4, 9
+	Patch "graphics/bulletimages/50bmg/full_A5.png", 0, 0
+}
+
+
+
+sprite BC50A1, 9, 9 {
+	XScale 8
+	YScale 8
+	Offset 4, 9
+	Patch "graphics/bulletimages/50bmg/case_A1.png", 0, 0
+}
+
+sprite BC50A8A2, 37, 9 {
+	XScale 8
+	YScale 8
+	Offset 19, 9
+	Patch "graphics/bulletimages/50bmg/case_A8A2.png", 0, 0
+}
+
+sprite BC50A7A3, 69, 9 {
+	XScale 8
+	YScale 8
+	Offset 35, 9
+	Patch "graphics/bulletimages/50bmg/case_A7A3.png", 0, 0
+}
+
+sprite BC50A4A6, 37, 9 {
+	XScale 8
+	YScale 8
+	Offset 18, 9
+	Patch "graphics/bulletimages/50bmg/case_A4A6.png", 0, 0
+}
+
+sprite BC50A5, 9, 9 {
+	XScale 8
+	YScale 8
+	Offset 4, 9
+	Patch "graphics/bulletimages/50bmg/case_A5.png", 0, 0
+}
+
+
+sprite BX50A0, 54, 71 {
+	XScale 8
+	YScale 8
+	Offset 27, 71
+	Patch "graphics/bulletimages/50bmg/50stack.png", 0, 0
+}
+
+sprite AB50A0, 37, 13 {
+	XScale 1.5
+	YScale 1.5
+	Offset 18, 13
+	Patch "graphics/newpickup/50bmg_Ammo_Box.png", 0, 0
+}

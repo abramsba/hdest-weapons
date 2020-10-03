@@ -56,6 +56,7 @@ const B_MF249_REFID   = "w06";
 const B_M4M203_REFID  = "w07";
 const B_MP5M203_REFID = "w08";
 const B_RPGL_REFID    = "w09";
+const B_M107_REFID    = "w10";
 
 const B_GLOCK_MAG_REFID  = "m01";
 const B_MP5_MAG_REFID    = "m02";
@@ -64,6 +65,7 @@ const B_M14_MAG_REFID    = "m04";
 const B_FAUX_DRUM_REFID  = "m05";
 const B_MF249_MAG_REFID  = "m06";
 const B_RPG_ROCKET_REFID = "m09";
+const B_M107_MAG_REFID   = "m10";
 
 // ID's and Ref's for Attachments
 const B_M4_REARSIGHT_ID   = 1;
@@ -136,3 +138,7 @@ const c_shell_load_bulk = c_van_shell_bulk / 2;
 
 const c_van_rocket_bulk = 24.4;
 const c_rocket_load_bulk = c_van_rocket_bulk / 4;
+
+const c_50bmg_bulk = 1.9;
+const c_m107_bulk = 300;
+const c_m107_mag_bulk = 25;

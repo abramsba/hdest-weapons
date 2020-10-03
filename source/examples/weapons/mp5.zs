@@ -268,7 +268,14 @@ class B_MP5 : BHDWeapon {
 			Loop;
 
 		LayerGunBack:
-			MP5G I 1;
+			MP5G I 1 {
+				if (invoker.scopeClass is "B_Scope_10x") {
+					invoker.bLayerSight = 999;
+				}
+				else {
+					invoker.bLayerSight = 104;
+				}
+			}
 			Loop;
 
 		NoHandsFront:
@@ -602,8 +609,8 @@ class Mp510xScopeOffset : ScopeOffset {
 	default {
 		Offset.WeaponClass "B_MP5";
 		Offset.WeaponOverlay "B_Scope_10x";
-		Offset.OffY -2;
-		Offset.OffX -1;
+		Offset.OffY 10;
+		Offset.OffX 0;
 	}
 }
 
@@ -963,7 +970,14 @@ class B_MP5_M203 : BaseGLRifle {
 			Loop;
 
 		LayerGunBack:
-			MP5G I 1;
+			MP5G I 1 {
+				if (invoker.scopeClass is "B_Scope_10x") {
+					invoker.bLayerSight = 999;
+				}
+				else {
+					invoker.bLayerSight = 104;
+				}
+			}
 			Loop;
 
 		NoHandsFront:
@@ -1250,8 +1264,9 @@ class Mp5M20310xScopeOffset : ScopeOffset {
 	default {
 		Offset.WeaponClass "B_MP5_M203";
 		Offset.WeaponOverlay "B_Scope_10x";
-		Offset.OffY -2;
-		Offset.OffX -1;
+		Offset.WeaponOverlay "B_Scope_10x";
+		Offset.OffY 10;
+		Offset.OffX 0;
 	}
 }
 

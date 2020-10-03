@@ -303,7 +303,7 @@ class B_Scope_10x : BaseAcog {
 	default {
 		BaseAttachment.SerialId B_SCOPE_10X_ID;
 		BaseAttachment.BaseSprite "SCOP";
-		BaseAttachment.BaseFrame 2;
+		BaseAttachment.BaseFrame 4;
 		HDPickup.RefID "s10";
 		Tag "LR scope";
 		Inventory.Icon "ZXOIA0";
@@ -313,8 +313,8 @@ class B_Scope_10x : BaseAcog {
 		BaseScopeAttachment.ScopeImage "bscope1";
 
 
-		BaseScopeAttachment.ScopeBackY -9;
-		BaseScopeAttachment.ScopeBackX -3;
+		BaseScopeAttachment.ScopeBackY 0;
+		BaseScopeAttachment.ScopeBackX 0;
 
 		BaseScopeAttachment.XClipCam         -46;
 		BaseScopeAttachment.YClipCam         -49;
@@ -340,7 +340,7 @@ class B_Scope_10x : BaseAcog {
 			Stop;
 
 		OverlayImage:
-			SCOP C -1;
+			SCOP E -1;
 			Stop;
 	}
 }

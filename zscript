@@ -26,6 +26,7 @@ version "4.4"
 #include "source/examples/weapons/fostech.zs"
 #include "source/examples/weapons/mf249.zs"
 #include "source/examples/weapons/rpg.zs"
+#include "source/examples/weapons/m107.zs"
 
 #include "source/examples/ammos.zs"
 #include "source/examples/bullets.zs"

@@ -293,6 +293,13 @@ class b_M249 : BHDWeapon {
 			M24G A 1 {
 				//console.printf("Layer %i", invoker.weaponStatus[I_MAG]);
 				//psp.frame = 5;
+				if (invoker.scopeClass is "B_Scope_10x") {
+					invoker.bLayerSight = 999;
+				}
+				else {
+					invoker.bLayerSight = 104;
+				}
+
 				let psp = player.FindPSprite(invoker.bLayerGunBack);
 				int ammo = invoker.weaponStatus[I_MAG];
 				if (ammo > 8) {
@@ -759,8 +766,8 @@ class M24910xScopeOffset : ScopeOffset {
 	default {
 		Offset.WeaponClass "B_M249";
 		Offset.WeaponOverlay "B_Scope_10x";
-		Offset.OffY -21;
-		Offset.OffX -1;
+		Offset.OffY 0;
+		Offset.OffX 0;
 	}
 }
 

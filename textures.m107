@@ -1,0 +1,64 @@
+
+// base
+
+sprite M17PA0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/none/base.png", 0, 0
+}
+
+sprite M17PB0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/none/empty.png", 0, 0
+}
+
+// low
+
+sprite M17PC0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/low/base.png", 0, 0
+}
+
+sprite M17PD0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/low/empty.png", 0, 0
+}
+
+// high
+
+sprite M17PE0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/high/base.png", 0, 0
+}
+
+sprite M17PF0, 155, 38 {
+	XScale 2
+	YScale 2
+	Offset 77, 38
+	Patch "graphics/gunimages/m107/high/empty.png", 0, 0
+}
+
+// Magazine
+
+sprite M17MA0, 17, 13 {
+	XScale 2
+	YScale 2
+	Offset 9, 13
+	Patch "graphics/mags/m107full.png", 0, 0
+}
+
+sprite M17MB0, 17, 13 {
+	XScale 2
+	YScale 2
+	Offset 9, 13
+	Patch "graphics/mags/m107empty.png", 0, 0
+}

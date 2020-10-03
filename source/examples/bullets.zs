@@ -63,3 +63,15 @@ class HDB_792 : HDBulletActor{
 		hdbulletactor.distantsound "world/riflefar";
 	}
 }
+
+class HDB_BMG:HDBulletActor{
+    default{
+        pushfactor 0.01;
+        mass 450;
+        speed 1200;
+        accuracy 600;
+        stamina 1270;
+        woundhealth 2;
+        hdbulletactor.hardness 4;
+    }
+}

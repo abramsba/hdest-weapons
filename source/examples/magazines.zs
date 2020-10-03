@@ -1,4 +1,6 @@
 
+
+
 class B556Mag : HDMagAmmo{
 	default{
 		hdmagammo.maxperunit 30;
@@ -336,6 +338,41 @@ class BGlockMagEmpty2 : GlockMagazine {
 	}
 }
 
+
+class M107Magazine : HDMagAmmo {
+	default{
+		hdmagammo.maxperunit 10;
+		hdmagammo.roundtype "B50BMGAmmo";
+		hdmagammo.roundbulk c_van_9mm_bulk;
+		hdmagammo.magbulk c_m107_mag_bulk;
+		hdpickup.refid B_M107_MAG_REFID;
+		tag "M107 magazine";
+		inventory.icon "M17MA0";
+		inventory.pickupmessage "Picked up a M107 magazine.";
+		scale 0.8;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt){
+		return "M17MA0", "BG50A7A3", "B50BMGAmmo", 1.7;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("b_m107");
+	}
+
+	states{
+		spawn:
+			M17M A -1;
+			stop;
+		spawnempty:
+			M17M B -1{
+				brollsprite = true;
+				brollcenter = true;
+				roll = randompick(0, 0, 0, 0, 2, 2, 2, 2, 1, 3) * 90;
+			}
+			stop;
+	}
+}
 
 
 

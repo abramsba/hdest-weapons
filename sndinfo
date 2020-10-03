@@ -46,6 +46,8 @@ weapons/fauxtech/click			"sounds/fauxtech/click.wav"
 weapons/m249/fire 	 "sounds/m249/fire.wav"
 weapons/m249/loading "sounds/m249/loading.wav"
 
+weapons/m107/fire 	"sounds/m107/fire.wav"
+
 weapons/rpg/fire "sounds/rpg/rpglaunch.wav"
 weapons/rpg/whoosh "sounds/rpg/rpgwhoosh.wav"
 
