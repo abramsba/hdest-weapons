@@ -74,7 +74,24 @@ class B_762Ball : BRoundAmmo {
 	}
 }
 
-
+class B_50BmgBall : BRoundAmmo {
+	default {
+		tag ".50 BMG ball";
+		hdpickup.bulk 1;
+		Inventory.Icon "B50TA0";
+	}
+	override string pickupmessage(){
+		return "Picked up a .50 BMG ball.";
+	}
+	states {
+		spawn:
+			B50T A -1;
+			stop;
+	}
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("B_BulletAssembler");
+	}
+}
 
 class B_Lead : BRoundAmmo {
 	default {

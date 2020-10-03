@@ -262,3 +262,4 @@ sprite AB50A0, 37, 13 {
 	Offset 18, 13
 	Patch "graphics/newpickup/50bmg_Ammo_Box.png", 0, 0
 }
+

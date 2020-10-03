@@ -274,6 +274,25 @@ class m14_noammo_noatta_giver : M14_random_noammo_giver {
 	override string getConfigLine() { return ""; }
 }
 
+class m107_with_scope : BWeaponGiver {
+	override String getWeaponClass() {
+		return "B_M107";
+	}
+	override String getConfigLine() {
+		return string.format("bs8");
+	}
+}
+
+
+class m107_with_acog : BWeaponGiver {
+	override String getWeaponClass() {
+		return "B_M107";
+	}
+	override String getConfigLine() {
+		return string.format("bs4");
+	}
+}
+
 class M249_Random_Giver : BWeaponGiver {
 	static const int sight_ids[] = { 0, 4, 5, 6, 7 };
 	override String getWeaponClass() {

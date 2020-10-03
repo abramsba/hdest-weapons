@@ -29,10 +29,15 @@ class B_BallCrafter : HDWeapon {
 		if (mode == 0) {
 			sb.drawString(sb.psmallfont, "Mode: 5.56mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_RED);
 		}
-		else {
+		else if (mode == 1) {
 			sb.drawString(sb.psmallfont, "Mode: 7.62mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_GREEN);
 			leadNeeded = 3;
 			brassNeeded = 2;
+		}
+		else if (mode == 2) {
+			sb.drawString(sb.psmallfont, "Mode: .50 BMG", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_CYAN);
+			leadNeeded = 25;
+			brassNeeded = 10;
 		}
 
 		let leadCount = hpl.CountInv("B_Lead");
@@ -86,6 +91,10 @@ class B_BallCrafter : HDWeapon {
 					brassNeeded = 2;
 					ballClass = "B_762Ball";
 				}
+				else if (invoker.mode == 2) {
+					leadNeeded = 25;
+					brassNeeded = 10;
+				}
 
 				int leadCount = invoker.owner.CountInv("B_Lead");
 				int brassCount = invoker.owner.CountInv("B_Brass");
@@ -108,7 +117,11 @@ class B_BallCrafter : HDWeapon {
 
 		AltFire:
 			TNT1 A 1 {
-				invoker.mode = invoker.mode == 0 ? 1 : 0;
+				invoker.mode += 1;
+				if (invoker.mode > 2) {
+					invoker.mode = 0;
+				}
+				//invoker.mode = invoker.mode == 0 ? 1 : 0;
 			}
 
 		Switched:
@@ -168,9 +181,13 @@ class B_CaseCrafter : HDWeapon {
 		if (mode == 0) {
 			sb.drawString(sb.psmallfont, "Mode: 5.56x45mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_RED);
 		}
-		else {
+		else if (mode == 1) {
 			sb.drawString(sb.psmallfont, "Mode: 7.62x51mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_GREEN);
 			brassNeeded = 3;
+		}
+		else if (mode == 2) {
+			sb.drawString(sb.psmallfont, "Mode: .50 BMG", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_CYAN);
+			brassNeeded = 15;
 		}
 
 		let brassCount = hpl.CountInv("B_Brass");
@@ -216,6 +233,10 @@ class B_CaseCrafter : HDWeapon {
 					brassNeeded = 3;
 					caseClass = "B762x51Brass";
 				}
+				else if (invoker.mode == 2) {
+					brassNeeded = 15;
+					caseClass = "B50BMGBrass";
+				}
 
 				int brassCount = invoker.owner.CountInv("B_Brass");
 				if (brassCount >= brassNeeded) {
@@ -237,7 +258,10 @@ class B_CaseCrafter : HDWeapon {
 
 		AltFire:
 			TNT1 A 1 {
-				invoker.mode = invoker.mode == 0 ? 1 : 0;
+				invoker.mode += 1;
+				if (invoker.mode > 2) {
+					invoker.mode = 0;
+				}
 			}
 
 		Switched:
@@ -311,7 +335,15 @@ class B_BulletAssembler : HDWeapon {
 			ballSprite = "B76TA0";
 			sb.drawString(sb.psmallfont, "Mode: 7.62x51mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_GREEN);
 		}
-		else {
+		else if (mode == 2) {
+			powderRequired = 15;
+			caseClass = "B50BMGBrass";
+			caseSprite = "BC50A7A3";
+			ballClass = "B_50BmgBall";
+			ballSprite = "B50TA0";
+			sb.drawString(sb.psmallfont, "Mode: .50 BMG", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_CYAN);
+		}
+		else if (mode == 0) {
 			sb.drawString(sb.psmallfont, "Mode: 5.56x45mm", (0, 0) + bob, sb.DI_SCREEN_CENTER | sb.DI_TEXT_ALIGN_CENTER, Font.CR_RED);
 		}
 
@@ -378,6 +410,9 @@ class B_BulletAssembler : HDWeapon {
 					ballSprite = "B76TA0";
 					bulletClass = "B762x51Ammo";
 				}
+				else if (invoker.mode == 2) {
+
+				}
 
 				int caseCount = invoker.owner.countinv(caseClass);
 				int ballCount = invoker.owner.countinv(ballClass);
@@ -402,7 +437,10 @@ class B_BulletAssembler : HDWeapon {
 
 		AltFire:
 			TNT1 A 1 {
-				invoker.mode = invoker.mode == 0 ? 1 : 0;
+				invoker.mode += 1;
+				if (invoker.mode > 2) {
+					invoker.mode = 0;
+				}
 			}
 
 		Switched:

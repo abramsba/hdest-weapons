@@ -47,6 +47,9 @@ DoomEdNums {
 	19025 = FosFullChoke
 	19026 = BRocketPickup
 	19027 = b_m107
+	19028 = B_50BmgBall
+	19029 = m107_with_scope
+	19030 = m107_with_acog
 
 	19100 = Glock_Random_Noammo_Noatta_Giver
 	19101 = mp5_noammo_noatta_giver

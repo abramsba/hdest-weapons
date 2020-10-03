@@ -91,16 +91,23 @@ sprite BBBGF0, 37, 31 {
 }
 
 
-sprite B56TA0, 51, 22 {
-	XScale 16
-	YScale 16
-	Offset 25, 22
-	Patch "graphics/fullspr/556tip.png", 0, 0
+sprite B56TA0, 27, 14 {
+	XScale 4
+	YScale 4
+	Offset 14, 14
+	Patch "graphics/newpickup/Bullet_tip_556.png", 0, 0
 } 
 
-sprite B76TA0, 51, 22 {
-	XScale 16
-	YScale 16
-	Offset 25, 22
-	Patch "graphics/fullspr/762tip.png", 0, 0
+sprite B76TA0, 43, 16 {
+	XScale 4
+	YScale 4
+	Offset 21, 16
+	Patch "graphics/newpickup/Bullet_tip_762.png", 0, 0
+} 
+
+sprite B50TA0, 65, 20 {
+	XScale 4
+	YScale 4
+	Offset 32, 20
+	Patch "graphics/newpickup/Bullet_tip_50bmg.png", 0, 0
 } 
