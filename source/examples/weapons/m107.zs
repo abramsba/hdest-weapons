@@ -9,7 +9,7 @@ class b_m107 : basestandardrifle {
 		inventory.pickupsound        "misc/w_pkup";
 		inventory.pickupmessage      "You got the M107.";
 		scale                        0.7;
-		weapon.bobrangex             0.4;
+		weapon.bobrangex             4.4;
 		weapon.bobrangey             2.5;
 		obituary                     "%o was assaulted by %k.";
 		tag                          "M107";
@@ -64,8 +64,8 @@ class b_m107 : basestandardrifle {
 
 		BHDWeapon.BRecoilXLow -2.5;
 		BHDWeapon.BRecoilXHigh 2.5;
-		BHDWeapon.BRecoilYLow  6.1;
-		BHDWeapon.BRecoilYHigh 9.4;
+		BHDWeapon.BRecoilYLow  10.1;
+		BHDWeapon.BRecoilYHigh 19.4;
 
 		BHDWeapon.BLayerSight   104;
 		BHDWeapon.bLayerRHand   107;
