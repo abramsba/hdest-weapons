@@ -114,8 +114,7 @@ class B_M4_RearSight : BaseSightAttachment {
 	}
 
 	override bool Blocked(BHDWeapon weapon) {
-		let className = weapon.getClassName();
-		if (className == "B_M4" || className == "B_M4_M203") {
+		if (weapon is "B_M4" || weapon is "B_M4_M203") {
 			return false;
 		}
 		return true;
@@ -194,8 +193,7 @@ class B_Faux_Sight : BaseSightAttachment {
 	}
 
 	override bool Blocked(BHDWeapon weapon) {
-		let className = weapon.getClassName();
-		if (className == "b_FauxtechOrigin") {
+		if (weapon is "b_FauxtechOrigin") {
 			return false;
 		}
 		return true;
