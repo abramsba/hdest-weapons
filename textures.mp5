@@ -19,14 +19,14 @@ sprite MP5CA0, 13, 26 {
 	XScale 3
 	YScale 3
 	Offset 7, 26
-	Patch "sprites/mp5/mp5clip.png", 0, 0
+	Patch "graphics/mags/mp5clip.png", 0, 0
 }
 
 sprite MP5CB0, 13, 26 {
 	XScale 3
 	YScale 3
 	Offset 7, 26
-	Patch "sprites/mp5/mp5clipnb.png", 0, 0
+	Patch "graphics/mags/mp5clipnb.png", 0, 0
 }
 
 

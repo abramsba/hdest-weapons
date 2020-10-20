@@ -12,7 +12,7 @@ class B_MP5 : BHDWeapon {
 		weapon.bobrangey             0.9;
 		obituary                     "%o was assaulted by %k.";
 		tag                          "MP5";
-		inventory.icon               "MP5PA0";
+		inventory.icon               "MP5UA0";
 		BHDWeapon.BFlashSprite       "MPFLA0";
 		BHDWeapon.BHeatDrain         12;
 		BHDWeapon.BBulletClass       "HDB_9";
@@ -21,8 +21,8 @@ class B_MP5 : BHDWeapon {
 		BHDWeapon.BGunMass           6.2;
 		BHDWeapon.BCookOff           30;
 		BHDWeapon.BHeatLimit         255;
-		BHDWeapon.BSpriteWithMag     "MP5PA0";
-		BHDWeapon.BSpriteWithoutMag  "MP5PB0";
+		BHDWeapon.BSpriteWithMag     "MP5UA0";
+		BHDWeapon.BSpriteWithoutMag  "MP5UB0";
 		BHDWeapon.BSpriteWithFrame    0;
 		BHDWeapon.BSpriteWithoutFrame 1;
 		BHDWeapon.BMagazineSprite    "MP5CA0";
