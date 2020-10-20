@@ -178,10 +178,17 @@ class b_m107 : basestandardrifle {
 			#### A 8 Offset(-15, 45);
 			#### A 10 Offset(-15, 46);
 			#### A 2 Offset(-15, 47) A_StartSound(invoker.bLoadSound, CHAN_WEAPON, CHANF_OVERLAP);
-			#### A 2 Offset(-15, 42);
-			#### A 2 Offset(-14, 47);
-			#### A 2 Offset(-14, 45);
-			#### A 2 Offset(-14, 44) {
+			#### A 2 Offset(-15, 45);
+			#### A 2 Offset(-15, 43);
+			#### A 2 Offset(-15, 41);
+			#### A 5 Offset(-15, 38);
+			#### A 3 Offset(-13, 41);
+			#### A 3 Offset(-11, 39);
+			#### A 3 Offset(-9, 37);
+
+			//#### A 2 Offset(-14, 47);
+			//#### A 2 Offset(-14, 45);
+			#### A 3 Offset(-5, 35) {
 				//A_StartSound(invoker.bLoadSound, CHAN_WEAPON, CHANF_OVERLAP);
 				let magRef = HDMagAmmo(FindInventory(invoker.bMagazineClass));
 				if (magRef) {
@@ -230,11 +237,10 @@ class b_m107 : basestandardrifle {
 					//BrokenRound();
 					return ResolveState(NULL);
 				}
-				//console.printf("noping");
 				return ResolveState("Nope");
 			}
 			#### A 0 offset(0, 34) {
-				return ResolveState("Nope");
+				return ResolveState("Ready");
 			}
 
 
