@@ -1,0 +1,28 @@
+
+sprite AKMPA0, 145, 41 {
+	XScale 3
+	YScale 3
+	Offset 72, 41
+	Patch "graphics/gunimages/akm/base.png", 0, 0
+}
+
+sprite AKMPB0, 145, 31 {
+	XScale 3
+	YScale 3
+	Offset 145, 31
+	Patch "graphics/gunimages/akm/empty.png", 0, 0
+}
+
+sprite AKMCA0, 23, 26 {
+	XScale 3
+	YScale 3
+	Offset 11, 26
+	Patch "graphics/mags/akmclip.png", 0, 0
+}
+
+sprite AKMCB0, 23, 26 {
+	XScale 3
+	YScale 3
+	Offset 11, 26
+	Patch "graphics/mags/akmclipnb.png", 0, 0
+}

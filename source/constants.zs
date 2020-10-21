@@ -57,6 +57,8 @@ const B_M4M203_REFID  = "w07";
 const B_MP5M203_REFID = "w08";
 const B_RPGL_REFID    = "w09";
 const B_M107_REFID    = "w10";
+const B_AKS74U_REFID  = "w11";
+const B_AKM_REFID     = "w12";
 
 const B_GLOCK_MAG_REFID  = "m01";
 const B_MP5_MAG_REFID    = "m02";
@@ -66,6 +68,8 @@ const B_FAUX_DRUM_REFID  = "m05";
 const B_MF249_MAG_REFID  = "m06";
 const B_RPG_ROCKET_REFID = "m09";
 const B_M107_MAG_REFID   = "m10";
+const B_AKS74U_MAG_REFID = "m11";
+const B_AKM_MAG_REFID    = "m12";
 
 // ID's and Ref's for Attachments
 const B_M4_REARSIGHT_ID   = 1;
@@ -90,11 +94,11 @@ const B_FOS_MOD_CHOKE     = 7;
 const B_FOS_FULL_CHOKE    = 8;
 
 
+const c_aks74u_bulk = 60;
+const c_aks74u_mag_bulk = 8;
 
-
-
-
-
+const c_akm_bulk = 100;
+const c_akm_mag_bulk = 20;
 
 const c_glock_bulk = 35;
 const c_glock_mag_bulk = 4;
@@ -116,6 +120,10 @@ const c_faux_drum_bulk = 20;
 const c_m249_bulk = 200;
 const c_m249_pouch_bulk = 15;
 
+const c_545_round_bulk = 0.30;
+const c_545_spent_bulk = c_545_round_bulk / 0.7;
+const c_545_load_bulk = c_545_round_bulk / 2;
+
 const c_556_round_bulk = 0.35;
 const c_556_spent_bulk = c_556_round_bulk / 0.7;
 const c_556_load_bulk = c_556_round_bulk / 2;
@@ -123,6 +131,10 @@ const c_556_load_bulk = c_556_round_bulk / 2;
 const c_762_round_bulk = 1.2;
 const c_762_spent_bulk = c_762_round_bulk / 0.6;
 const c_762_load_bulk = c_762_round_bulk / 2;
+
+const c_762_sov_round_bulk = 1;
+const c_762_sov_spent_bulk = c_762_sov_round_bulk / 0.6;
+const c_762_sov_load_bulk = c_762_sov_round_bulk / 2;
 
 const c_rpg_bulk = 75;
 const c_rpg_case_bulk = 2.8;

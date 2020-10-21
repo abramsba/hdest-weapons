@@ -75,3 +75,27 @@ class HDB_BMG:HDBulletActor{
         hdbulletactor.hardness 4;
     }
 }
+
+class HDB_545:HDBulletActor{
+    default{
+        pushfactor 0.4;
+        mass 36;
+        speed 1160;
+        accuracy 666;
+        stamina 545;
+        woundhealth 5;
+        hdbulletactor.hardness 4;
+    }
+}
+
+class HDB_762sov : HDBulletActor{
+    default{
+        pushfactor 0.3;
+        mass 80;
+        speed 960;
+        accuracy 600;
+        stamina 762;
+        woundhealth 5;
+        hdbulletactor.hardness 4;
+    }
+}

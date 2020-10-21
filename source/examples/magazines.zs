@@ -474,3 +474,76 @@ class BMagazineBox : HDUPK {
 	}
 
 }
+
+
+
+
+class BAK_545Mag : HDMagAmmo {
+	default{
+		hdmagammo.maxperunit 30;
+		hdmagammo.roundtype "B545Ammo";
+		hdmagammo.roundbulk c_556_load_bulk;
+		hdmagammo.magbulk c_aks74u_mag_bulk;
+		hdpickup.refid B_AKS74U_MAG_REFID;
+		tag "5.45x39mm magazine";
+		inventory.pickupmessage "Picked up a 5.45x39mm magazine.";
+		Inventory.Icon "AK7CA0";
+		scale 0.8;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		return "AK7CA0", "BB56A7A3", "B545Ammo", 1.7;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("B_AKS74U");
+	}
+
+	states{
+		spawn:
+			AK7C A -1;
+			stop;
+		spawnempty:
+			AK7C B -1{
+				brollsprite = true;
+				brollcenter = true;
+				roll = randompick(0, 0, 0, 0, 2, 2, 2, 2, 1, 3) * 90;
+			}
+			stop;
+	}
+}
+
+class BAKM_762Mag : HDMagAmmo {
+	default{
+		hdmagammo.maxperunit 30;
+		hdmagammo.roundtype "B762SovAmmo";
+		hdmagammo.roundbulk c_762_sov_load_bulk;
+		hdmagammo.magbulk c_akm_mag_bulk;
+		hdpickup.refid B_AKM_MAG_REFID;
+		tag "7.62x39mm magazine";
+		inventory.pickupmessage "Picked up a 7.62x39mm magazine.";
+		Inventory.Icon "AKMCA0";
+		scale 0.8;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		return "AKMCA0", "BB56A7A3", "B545Ammo", 1.7;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("B_AKM");
+	}
+
+	states{
+		spawn:
+			AKMC A -1;
+			stop;
+		spawnempty:
+			AKMC B -1{
+				brollsprite = true;
+				brollcenter = true;
+				roll = randompick(0, 0, 0, 0, 2, 2, 2, 2, 1, 3) * 90;
+			}
+			stop;
+	}
+}

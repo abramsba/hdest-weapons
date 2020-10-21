@@ -1,0 +1,28 @@
+
+sprite AK7PA0, 123, 46 {
+	XScale 3
+	YScale 3
+	Offset 61, 46
+	Patch "graphics/gunimages/aks74u/base.png", 0, 0
+}
+
+sprite AK7PB0, 123, 46 {
+	XScale 3
+	YScale 3
+	Offset 61, 46
+	Patch "graphics/gunimages/aks74u/empty.png", 0, 0
+}
+
+sprite AK7CA0, 21, 32 {
+	XScale 3
+	YScale 3
+	Offset 11, 32
+	Patch "graphics/mags/ak7clip.png", 0, 0
+}
+
+sprite AK7CB0, 21, 32 {
+	XScale 3
+	YScale 3
+	Offset 11, 32
+	Patch "graphics/mags/ak7clipnb.png", 0, 0
+}

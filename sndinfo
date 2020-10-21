@@ -43,6 +43,8 @@ weapons/fauxtech/druminsert 	"sounds/fauxtech/druminsert.wav"
 weapons/fauxtech/firefar 		"sounds/fauxtech/firefar.wav"
 weapons/fauxtech/click			"sounds/fauxtech/click.wav"
 
+weapons/akm/fire "sounds/akm/fire.wav"
+
 weapons/m249/fire 	 "sounds/m249/fire.wav"
 weapons/m249/loading "sounds/m249/loading.wav"
 

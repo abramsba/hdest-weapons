@@ -50,6 +50,8 @@ DoomEdNums {
 	19028 = B_50BmgBall
 	19029 = m107_with_scope
 	19030 = m107_with_acog
+	19031 = B_AKS74U
+	19032 = B_AKM
 
 	19100 = Glock_Random_Noammo_Noatta_Giver
 	19101 = mp5_noammo_noatta_giver
@@ -71,6 +73,8 @@ DoomEdNums {
 	20008 = BM249Mag
 	20009 = BRpgRocket
 	20010 = M107Magazine
+	20011 = BAK_545Mag
+	20012 = BAKM_762Mag
 
 	21000 = B_556_Box
 	21001 = BAmBox

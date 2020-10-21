@@ -121,11 +121,77 @@ class B_50BMG_Box : HDUPK {
 
 
 
+class B545Ammo : BRoundAmmo {
+	default {
+		tag "5.45x39mm round";
+		hdpickup.refid "b54";
+		hdpickup.bulk c_545_round_bulk;
+		Inventory.Icon "BB56A7A3";
+	}
+	override string pickupmessage(){
+		return "Picked up a stray 5.56x45mm round.";
+	}
 
+	override void SplitPickup(){
+		//SplitPickupBoxableRound(10,100,"B_556_Box","BS56A0","BB56A7A3");
+	}
 
+	states {
+		spawn:
+			BB56 A -1;
+			stop;
+		dummy:
+			BS56 A -1;
+			stop;
+	}
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("B_AKS74U");
+	}
+}
 
+class B545Brass : BRoundShell {
+	default {
+		tag "5.45x39 brass";
+		HDPickUp.RefId "b4b";
+		HdPickup.Bulk c_545_spent_bulk;
+		Inventory.PickupMessage "Picked up some 5.45x39mm brass.";
+	}
+	states {
+		spawn:
+			BF56 A -1;
+			Stop;
+	}	
+}
 
+class B545Spent : BRoundSpent {
+	default {
+		BRoundSpent.ShellClass "B545Brass";
+		HDUPK.PickupType "B545Brass";
+		HDUPK.PickupMessage "Picked up some 5.45x39mm brass.";
+	}
+	states {
+		spawn:
+			BF56 A 2 {
+				angle+=45;
+				if(floorz==pos.z&&!vel.z)A_Countdown();
+			}
+			Wait;
 
+		death:
+			BF56 A -1 {
+				actor p=spawn(invoker.shellClass,self.pos,ALLOW_REPLACE);
+				p.vel = self.vel;
+				p.vel.xy*=3;
+				p.angle=angle;
+				if(p.vel!=(0,0,0)){
+					p.A_FaceMovementDirection();
+					p.angle+=90;
+				}
+				destroy();
+			}
+			Stop;
+	}
+}
 
 
 
@@ -497,4 +563,90 @@ class BResourceBox : HDUPK {
 			stop;
 	}
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class B762SovAmmo : BRoundAmmo {
+	default {
+		tag "7.62x39mm round";
+		hdpickup.refid "b79";
+		hdpickup.bulk c_762_sov_round_bulk;
+		Inventory.Icon "BB56A7A3";
+	}
+	override string pickupmessage(){
+		return "Picked up a stray 7.62x39mm round.";
+	}
+
+	override void SplitPickup(){
+		//SplitPickupBoxableRound(10,100,"B_556_Box","BS56A0","BB56A7A3");
+	}
+
+	states {
+		spawn:
+			BB56 A -1;
+			stop;
+		dummy:
+			BS56 A -1;
+			stop;
+	}
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("B_AKM");
+	}
+}
+
+class B762SovBrass : BRoundShell {
+	default {
+		tag "7.62x39 brass";
+		HDPickUp.RefId "b9b";
+		HdPickup.Bulk c_762_sov_spent_bulk;
+		Inventory.PickupMessage "Picked up some 7.62x39mm brass.";
+	}
+	states {
+		spawn:
+			BF56 A -1;
+			Stop;
+	}	
+}
+
+class B762SovSpent : BRoundSpent {
+	default {
+		BRoundSpent.ShellClass "B762SovBrass";
+		HDUPK.PickupType "B762SovBrass";
+		HDUPK.PickupMessage "Picked up some 5.45x39mm brass.";
+	}
+	states {
+		spawn:
+			BF56 A 2 {
+				angle+=45;
+				if(floorz==pos.z&&!vel.z)A_Countdown();
+			}
+			Wait;
+
+		death:
+			BF56 A -1 {
+				actor p=spawn(invoker.shellClass,self.pos,ALLOW_REPLACE);
+				p.vel = self.vel;
+				p.vel.xy*=3;
+				p.angle=angle;
+				if(p.vel!=(0,0,0)){
+					p.A_FaceMovementDirection();
+					p.angle+=90;
+				}
+				destroy();
+			}
+			Stop;
+	}
 }
