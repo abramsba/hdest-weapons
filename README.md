@@ -44,7 +44,7 @@ Weapon Sprites: [Clay](https://www.artstation.com/donor_clay)
 
 Sound Effects: [Duncan Soo](https://www.duncansoo.com/)
 
-Player Sprites: Ultra64
+Player/Item Sprites: Ultra64
 
 Play testing: Shredder, a1337spy
 
@@ -238,9 +238,12 @@ You can adjust the chances of each enemy spawning. The enemies are:
 Each weapon has its own magazine/drum/pouch. The Glock and MP5 are chambered in the the default Hideous Destructor 9mm bullet. The Fauxtech Origin also reuses the default Hideous Destructor shotgun shells. Ammo for the M203 uses the default rocket grenade ammo as well. 
 
 <p>
-	<img src="sprites/ammo/5BOXA0.png">
-	<img src="sprites/ammo/7BBXA0.png">
-	<img src="sprites/ammo/BBOXA0.png">
+	<img src="graphics/newpickup/556_Ammo_Box.png">
+	<img src="graphics/newpickup/762_Ammo_Box.png">
+	<img src="graphics/newpickup/50bmg_Ammo_Box.png">
+	<img src="graphics/newpickup/545_Ammo_Box.png">
+	<img src="graphics/newpickup/762rus_Ammo_Box.png">
+	<img src="graphics/newpickup/Ammo_Container.png">
 </p>
 
 - Glock magazine (9mm): 15 rounds
