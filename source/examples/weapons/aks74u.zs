@@ -34,7 +34,7 @@ class B_AKS74U : BaseStandardRifle {
 		BHDWeapon.BarrelWidth        1;
 		BHDWeapon.BarrelDepth        3;
 		
-		BHDWeapon.BFireSound         "weapons/akm/fire";
+		BHDWeapon.BFireSound         "weapons/aks74u/fire";
 		BHDWeapon.BSFireSound        "weapons/m4/silentfire";
 		BHDWeapon.BChamberSound      "weapons/m4/chamber";
 		BHDWeapon.BBoltForwardSound  "weapons/m4/boltback";

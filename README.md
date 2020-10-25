@@ -209,10 +209,28 @@ You can adjust the chances of each enemy spawning. The enemies are:
 <img src="graphics/gunimages/m249/none/flashlight_silencer.png">
 </p>
 
+### M107
+
+<p align="center">
+<img src="graphics/gunimages/m107/high/base.png">
+</p>
+
 ### RPG
 
 <p align="center">
 <img src="graphics/gunimages/rpg/base.png">
+</p>
+
+### AKM
+
+<p align="center">
+<img src="graphics/gunimages/akm/base.png">
+</p>
+
+### AKS74u
+
+<p align="center">
+<img src="graphics/gunimages/aks74u/base.png">
 </p>
 
 ## Ammo
@@ -225,12 +243,15 @@ Each weapon has its own magazine/drum/pouch. The Glock and MP5 are chambered in 
 	<img src="sprites/ammo/BBOXA0.png">
 </p>
 
-- Glock Magazine (9mm): 15 rounds
-- MP5 Magazine (9mm): 30 rounds
-- M4 Magazine (5.56mm): 30 rounds
-- M14 Magazine: (7.62mm): 20 rounds
-- Fauxtech Drum: 20 shells
-- M249 Pouch: (5.56mm): 200 rounds
+- Glock magazine (9mm): 15 rounds
+- MP5 magazine (9mm): 30 rounds
+- M4 magazine (5.56mm): 30 rounds
+- M14 magazine: (7.62mm): 20 rounds
+- Fauxtech drum: 20 shells
+- M249 pouch: (5.56mm): 200 rounds
+- M107 magazine: (.50 cal) 10 rounds
+- AKM magazine: (7.62mm): 30 rounds
+- AKS74u magazine: (5.45mm): 30 rounds
 
 For the M249 pouch, a reloading tool is available. It is similar to the 7mm reloader. It needs an empty M249 magazine and loose 5.56 rounds.
 
@@ -265,17 +286,29 @@ Magazines for weapons correspond to their weapon number, except for the M203 wea
 
 <p><img src="sprites/m4/m4clip.png"></p>
 
-- `m04`: M14 Magazine
+- `m04`: M14 magazine
 
 <p><img src="sprites/m14/bm14clip.png"></p>
 
-- `m05`: Fauxtech Origin Drum
+- `m05`: Fauxtech Origin drum
 
 <p><img src="sprites/fostech/pfosmag.png"></p>
 
-- `m06`: M249 Pouch
+- `m06`: M249 pouch
 
 <p><img src="sprites/mf240/bm249clip.png"></p>
+
+- `m10`: M107 magazine
+
+<p><img src="graphics/mags/m107full.png"></p>
+
+- `m11`: AKS74u magazine
+
+<p><img src="graphics/mags/ak7clip.png"></p>
+
+- `m12`: AKM magazine
+
+<p><img src="graphics/mags/akmclip.png"></p>
 
 Note: The M4 and Fauxtech Origin by default have no rear sight. You have to pick one yourself or you will only see the front sight image.
 
@@ -290,6 +323,9 @@ Note: The M4 and Fauxtech Origin by default have no rear sight. You have to pick
 - `w07`: M4 M203
 - `w08`: MP5 M203
 - `w09`: RPG
+- `w10`: M107
+- `w11`: AKS74u
+- `w12`: AKM
 
 ### Muzzle IDs
 
@@ -306,35 +342,35 @@ Note: The M4 and Fauxtech Origin by default have no rear sight. You have to pick
 
 - `bs1`: M4 Rear ironsight
 
-<p><img src="sprites/accessory/fullsize/m4rearsight.png"></p>
+<p><img src="graphics/newpickup/Sight_M4.png"></p>
 
 - `bs2`: M4 Carryhandle
 
-<p><img src="sprites/accessory/fullsize/m4carryhandle.png"></p>
+<p><img src="graphics/newpickup/Sight_Handle.png"></p>
 
 - `bs3`: Fauxtech Origin Diamond Sight
 
-<p><img src="sprites/accessory/fullsize/fostechrear.png"></p>
+<p><img src="graphics/newpickup/Sight_Fostech.png"></p>
 
 - `bs4`: ACOG
 
-<p><img src="sprites/accessory/fullsize/acog.png"></p>
+<p><img src="graphics/newpickup/Attachment ACOG.png"></p>
 
 - `bs5`: Red dot
 
-<p><img src="sprites/accessory/fullsize/reddot.png"></p>
+<p><img src="graphics/newpickup/Attachment Red Dot.png"></p>
 
 - `bs6`: Holo sight
 
-<p><img src="sprites/accessory/fullsize/holo.png"></p>
+<p><img src="graphics/newpickup/Attachment Holo.png"></p>
 
 - `bs7`: Reflex sight
 
-<p><img src="sprites/accessory/fullsize/rreflex.png"></p>
+<p><img src="graphics/newpickup/Attachment Reflex.png"></p>
 
 - `bs8`: 10x Scope
 
-<p><img src="sprites/accessory/fullsize/rreflex.png"></p>
+<p><img src="graphics/newpickup/Attachment Scope.png"></p>
 
 ### Misc IDs
 
