@@ -280,7 +280,7 @@ Magazines for weapons correspond to their weapon number, except for the M203 wea
 
 - `m02`: MP5 magazine
 
-<p><img src="sprites/mp5/mp5clip.png"></p>
+<p><img src="graphics/mags/mp5clip.png"></p>
 
 - `m03`: M4 magazine
 
