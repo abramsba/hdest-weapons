@@ -118,30 +118,43 @@ class B_50BMG_Box : HDUPK {
 	}
 }
 
-
-
+class B_545_Box : HDUPK {
+	default {
+		scale 0.4;
+		hdupk.amount 100;
+		hdupk.pickupsound "weapons/pocket";
+		hdupk.pickupmessage "Picked up some 5.45x39mm ammo.";
+		hdupk.pickuptype "B545Ammo";
+	}
+	states {
+		spawn:
+			AB54 A -1;
+			Stop;
+	}
+}
 
 class B545Ammo : BRoundAmmo {
 	default {
 		tag "5.45x39mm round";
 		hdpickup.refid "b54";
 		hdpickup.bulk c_545_round_bulk;
-		Inventory.Icon "BB56A7A3";
+		Inventory.Icon "B54BA7A3";
 	}
 	override string pickupmessage(){
 		return "Picked up a stray 5.56x45mm round.";
 	}
 
-	override void SplitPickup(){
-		//SplitPickupBoxableRound(10,100,"B_556_Box","BS56A0","BB56A7A3");
+	override void SplitPickup() {
+		SplitPickupBoxableRound(10, 100, "B_545_Box", "B54SA0", "B54BA7A3");
 	}
 
 	states {
 		spawn:
-			BB56 A -1;
+			B54B A -1;
 			stop;
 		dummy:
-			BS56 A -1;
+			B54S A -1;
+			B54C A -1;
 			stop;
 	}
 	override void GetItemsThatUseThis() {
@@ -158,7 +171,7 @@ class B545Brass : BRoundShell {
 	}
 	states {
 		spawn:
-			BF56 A -1;
+			B54C A -1;
 			Stop;
 	}	
 }
@@ -171,14 +184,14 @@ class B545Spent : BRoundSpent {
 	}
 	states {
 		spawn:
-			BF56 A 2 {
+			B54C A 2 {
 				angle+=45;
 				if(floorz==pos.z&&!vel.z)A_Countdown();
 			}
 			Wait;
 
 		death:
-			BF56 A -1 {
+			B54C A -1 {
 				actor p=spawn(invoker.shellClass,self.pos,ALLOW_REPLACE);
 				p.vel = self.vel;
 				p.vel.xy*=3;
@@ -576,6 +589,20 @@ class BResourceBox : HDUPK {
 
 
 
+class B_762sov_Box : HDUPK {
+	default{
+		scale 0.4;
+		hdupk.amount 50;
+		hdupk.pickupsound "weapons/pocket";
+		hdupk.pickupmessage "Picked up some 7.62x39mm ammo.";
+		hdupk.pickuptype "B762SovAmmo";
+	}
+	states{
+	spawn:
+		AB7S A -1;
+		Stop;
+	}
+}
 
 
 
@@ -584,22 +611,23 @@ class B762SovAmmo : BRoundAmmo {
 		tag "7.62x39mm round";
 		hdpickup.refid "b79";
 		hdpickup.bulk c_762_sov_round_bulk;
-		Inventory.Icon "BB56A7A3";
+		Inventory.Icon "B7SBA7A3";
 	}
 	override string pickupmessage(){
 		return "Picked up a stray 7.62x39mm round.";
 	}
 
 	override void SplitPickup(){
-		//SplitPickupBoxableRound(10,100,"B_556_Box","BS56A0","BB56A7A3");
+		SplitPickupBoxableRound(10, 100, "B_762sov_Box", "B7SSA0", "B7SBA7A3");
 	}
 
 	states {
 		spawn:
-			BB56 A -1;
+			B7SB A -1;
 			stop;
 		dummy:
-			BS56 A -1;
+			B7SC A -1;
+			B7SS A -1;
 			stop;
 	}
 	override void GetItemsThatUseThis() {
@@ -616,7 +644,7 @@ class B762SovBrass : BRoundShell {
 	}
 	states {
 		spawn:
-			BF56 A -1;
+			B7SC A -1;
 			Stop;
 	}	
 }
@@ -629,14 +657,14 @@ class B762SovSpent : BRoundSpent {
 	}
 	states {
 		spawn:
-			BF56 A 2 {
+			B7SC A 2 {
 				angle+=45;
 				if(floorz==pos.z&&!vel.z)A_Countdown();
 			}
 			Wait;
 
 		death:
-			BF56 A -1 {
+			B7SC A -1 {
 				actor p=spawn(invoker.shellClass,self.pos,ALLOW_REPLACE);
 				p.vel = self.vel;
 				p.vel.xy*=3;

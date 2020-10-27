@@ -13,7 +13,7 @@ class B_AKM : BaseStandardRifle {
 		obituary                     "%o was assaulted by %k.";
 		tag                          "AKM";
 		inventory.icon               "AKMPA0";
-		BHDWeapon.BFlashSprite       "FLSHA0";
+		BHDWeapon.BFlashSprite       "AKMFA0";
 		BHDWeapon.BHeatDrain         12;
 		BHDWeapon.BBulletClass       "HDB_762sov";
 		BHDWeapon.BAmmoClass         "B762SovAmmo";
@@ -299,6 +299,10 @@ class B_AKM : BaseStandardRifle {
 			#### A 0 offset(0, 34) {
 				return ResolveState("Nope");
 			}
+
+		DUMMY:
+			AKMF ABCD -1;
+			Stop;
 
 
 	}

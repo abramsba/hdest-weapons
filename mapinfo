@@ -81,6 +81,8 @@ DoomEdNums {
 	21002 = B_762_Box
 	21003 = BResourceBox
 	21004 = B_50BMG_Box
+	21005 = B_545_Box
+	21006 = B_762sov_Box
 
 	30000 = B_M16_Silencer
 	30001 = B_M16_Extender

@@ -403,6 +403,8 @@ class RandomMagPickup : HDInvRandomSpawner {
 		dropitem "BFauxDrum",256,1;
 		dropitem "b762_m14_mag",256,1;
 		dropitem "BM249Mag",256,1;
+		dropitem "BAKM_762Mag",256,1;
+		dropitem "BAK_545Mag",256,1;
 	}
 }
 
@@ -410,6 +412,8 @@ class RandomAmmoPickup : HDInvRandomSpawner {
 	default {
 		dropitem "B_556_Box",256,1;
 		dropitem "B_762_Box",256,1;
+		dropitem "B_545_Box",256,1;
+		dropitem "B_762sov_Box",256,1;
 		dropitem "HD9mBoxPickup",256,1;
 		dropitem "ShellBoxPickup",256,1;
 	}
@@ -435,6 +439,8 @@ class RandomWeaponPickup : HDInvRandomSpawner {
 		dropitem "Glock_Random_Giver", 256, 1;
 		dropItem "M249_Random_Giver", 256, 1;
 		dropItem "Rpg_Random_Giver", 256, 1;
+		dropItem "B_AKM", 256, 1;
+		dropItem "B_AKS74U", 256, 1;
 	}
 }
 

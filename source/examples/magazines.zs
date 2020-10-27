@@ -485,14 +485,14 @@ class BAK_545Mag : HDMagAmmo {
 		hdmagammo.roundbulk c_556_load_bulk;
 		hdmagammo.magbulk c_aks74u_mag_bulk;
 		hdpickup.refid B_AKS74U_MAG_REFID;
-		tag "5.45x39mm magazine";
-		inventory.pickupmessage "Picked up a 5.45x39mm magazine.";
+		tag "AKS74u 5.45x39mm magazine";
+		inventory.pickupmessage "Picked up an AKS74u magazine.";
 		Inventory.Icon "AK7CA0";
 		scale 0.8;
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "AK7CA0", "BB56A7A3", "B545Ammo", 1.7;
+		return "AK7CA0", "B54BA7A3", "B545Ammo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -520,14 +520,14 @@ class BAKM_762Mag : HDMagAmmo {
 		hdmagammo.roundbulk c_762_sov_load_bulk;
 		hdmagammo.magbulk c_akm_mag_bulk;
 		hdpickup.refid B_AKM_MAG_REFID;
-		tag "7.62x39mm magazine";
-		inventory.pickupmessage "Picked up a 7.62x39mm magazine.";
+		tag "AKM 7.62x39mm magazine";
+		inventory.pickupmessage "Picked up an AKM 7.62x39mm magazine.";
 		Inventory.Icon "AKMCA0";
 		scale 0.8;
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "AKMCA0", "BB56A7A3", "B545Ammo", 1.7;
+		return "AKMCA0", "B7SBA7A3", "B762SovAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {

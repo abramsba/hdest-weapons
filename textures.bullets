@@ -263,3 +263,160 @@ sprite AB50A0, 37, 13 {
 	Patch "graphics/newpickup/50bmg_Ammo_Box.png", 0, 0
 }
 
+// 5.54
+// Full
+sprite B54BA1, 5, 5 {
+	XScale 8
+	YScale 8
+	Offset 2, 5
+	Patch "graphics/bulletimages/545/full_A1.png", 0, 0
+}
+sprite B54BA5, 5, 5 {
+	XScale 8
+	YScale 8
+	Offset 2, 5
+	Patch "graphics/bulletimages/545/full_A5.png", 0, 0
+}
+sprite B54BA6A4, 24, 5 {
+	XScale 8
+	YScale 8
+	Offset 12, 5
+	Patch "graphics/bulletimages/545/full_A6A4.png", 0, 0
+}
+sprite B54BA7A3, 32, 5 {
+	XScale 8
+	YScale 8
+	Offset 16, 5
+	Patch "graphics/bulletimages/545/full_A7A3.png", 0, 0
+}
+sprite B54BA8A2, 24, 5 {
+	XScale 8
+	YScale 8
+	Offset 12, 5
+	Patch "graphics/bulletimages/545/full_A8A2.png", 0, 0
+}
+// Case
+sprite B54CA1, 5, 5 {
+	XScale 8
+	YScale 8
+	Offset 2, 5
+	Patch "graphics/bulletimages/545/case_A1.png", 0, 0
+}
+sprite B54CA5, 5, 5 {
+	XScale 8
+	YScale 8
+	Offset 2, 5
+	Patch "graphics/bulletimages/545/case_A5.png", 0, 0
+}
+sprite B54CA6A4, 24, 5 {
+	XScale 8
+	YScale 8
+	Offset 12, 5
+	Patch "graphics/bulletimages/545/case_A6A4.png", 0, 0
+}
+sprite B54CA7A3, 32, 5 {
+	XScale 8
+	YScale 8
+	Offset 16, 5
+	Patch "graphics/bulletimages/545/case_A7A3.png", 0, 0
+}
+sprite B54CA8A2, 24, 5 {
+	XScale 8
+	YScale 8
+	Offset 12, 5
+	Patch "graphics/bulletimages/545/case_A8A2.png", 0, 0
+}
+// Stack
+sprite B54SA0, 34, 32 {
+	XScale 8
+	YScale 8
+	Offset 17, 32
+	Patch "graphics/bulletimages/545/545stack.png", 0, 0
+}
+
+// Box
+sprite AB54A0, 37, 13 {
+	XScale 1.5
+	YScale 1.5
+	Offset 18, 13
+	Patch "graphics/newpickup/545_Ammo_Box.png", 0, 0
+}
+
+// 7.62x39
+// Full
+sprite B7SBA1, 7, 7 {
+	XScale 8
+	YScale 8
+	Offset 4, 7
+	Patch "graphics/bulletimages/762sov/full_A1.png", 0, 0
+}
+sprite B7SBA5, 7, 7 {
+	XScale 8
+	YScale 8
+	Offset 4, 7
+	Patch "graphics/bulletimages/762sov/full_A5.png", 0, 0
+}
+sprite B7SBA6A4, 30, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/full_A6A4.png", 0, 0
+}
+sprite B7SBA7A3, 31, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/full_A7A3.png", 0, 0
+}
+sprite B7SBA8A2, 30, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/full_A8A2.png", 0, 0
+}
+// Case
+sprite B7SCA1, 7, 7 {
+	XScale 8
+	YScale 8
+	Offset 4, 7
+	Patch "graphics/bulletimages/762sov/case_A1.png", 0, 0
+}
+sprite B7SCA5, 7, 7 {
+	XScale 8
+	YScale 8
+	Offset 4, 7
+	Patch "graphics/bulletimages/762sov/case_A5.png", 0, 0
+}
+sprite B7SCA6A4, 30, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/case_A6A4.png", 0, 0
+}
+sprite B7SCA7A3, 31, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/case_A7A3.png", 0, 0
+}
+sprite B7SCA8A2, 30, 7 {
+	XScale 8
+	YScale 8
+	Offset 15, 7
+	Patch "graphics/bulletimages/762sov/case_A8A2.png", 0, 0
+}
+// Stack
+sprite B7SSA0, 41, 32 {
+	XScale 8
+	YScale 8
+	Offset 41, 32
+	Patch "graphics/bulletimages/762sov/762sovstack.png", 0, 0
+}
+
+// Box
+sprite AB7SA0, 36, 14 {
+	XScale 1.5
+	YScale 1.5
+	Offset 18, 14
+	Patch "graphics/newpickup/762rus_Ammo_Box.png", 0, 0
+}

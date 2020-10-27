@@ -13,7 +13,7 @@ class B_AKS74U : BaseStandardRifle {
 		obituary                     "%o was assaulted by %k.";
 		tag                          "AKS-74u";
 		inventory.icon               "AK7PA0";
-		BHDWeapon.BFlashSprite       "FLSHA0";
+		BHDWeapon.BFlashSprite       "AKFLA0";
 		BHDWeapon.BHeatDrain         12;
 		BHDWeapon.BBulletClass       "HDB_545";
 		BHDWeapon.BAmmoClass         "B545Ammo";
@@ -299,6 +299,12 @@ class B_AKS74U : BaseStandardRifle {
 			#### A 0 offset(0, 34) {
 				return ResolveState("Nope");
 			}
+
+		Dummy:
+			AKFL A -1;
+			AKFL B -1;
+			AKFL C -1;
+			AKFL D -1;
 
 
 	}
