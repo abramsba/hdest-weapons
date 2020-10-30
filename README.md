@@ -233,6 +233,13 @@ You can adjust the chances of each enemy spawning. The enemies are:
 <img src="graphics/gunimages/aks74u/base.png">
 </p>
 
+### Uzi
+
+<p align="center">
+<img src="graphics/gunimages/uzi/base.png">
+<img src="graphics/gunimages/uzi/silencer.png">
+</p>
+
 ## Ammo
 
 Each weapon has its own magazine/drum/pouch. The Glock and MP5 are chambered in the the default Hideous Destructor 9mm bullet. The Fauxtech Origin also reuses the default Hideous Destructor shotgun shells. Ammo for the M203 uses the default rocket grenade ammo as well. 
@@ -249,12 +256,13 @@ Each weapon has its own magazine/drum/pouch. The Glock and MP5 are chambered in 
 - Glock magazine (9mm): 15 rounds
 - MP5 magazine (9mm): 30 rounds
 - M4 magazine (5.56mm): 30 rounds
-- M14 magazine: (7.62mm): 20 rounds
-- Fauxtech drum: 20 shells
-- M249 pouch: (5.56mm): 200 rounds
-- M107 magazine: (.50 cal) 10 rounds
-- AKM magazine: (7.62mm): 30 rounds
-- AKS74u magazine: (5.45mm): 30 rounds
+- M14 magazine (7.62mm): 20 rounds
+- Fauxtech drum (12 gauge): 20 shells
+- M249 pouch (5.56mm): 200 rounds
+- M107 magazine (.50 cal) 10 rounds
+- AKM magazine (7.62mm): 30 rounds
+- AKS74u magazine (5.45mm): 30 rounds
+- Uzi magazine (9mm): 30 rounds
 
 For the M249 pouch, a reloading tool is available. It is similar to the 7mm reloader. It needs an empty M249 magazine and loose 5.56 rounds.
 
@@ -313,6 +321,10 @@ Magazines for weapons correspond to their weapon number, except for the M203 wea
 
 <p><img src="graphics/mags/akmclip.png"></p>
 
+- `m13`: Uzi magazine
+
+<p><img src="graphics/mags/uziclip.png"></p>
+
 Note: The M4 and Fauxtech Origin by default have no rear sight. You have to pick one yourself or you will only see the front sight image.
 
 ### Weapon IDs
@@ -329,6 +341,7 @@ Note: The M4 and Fauxtech Origin by default have no rear sight. You have to pick
 - `w10`: M107
 - `w11`: AKS74u
 - `w12`: AKM
+- `w13`: Uzi
 
 ### Muzzle IDs
 

@@ -29,6 +29,7 @@ version "4.4"
 #include "source/examples/weapons/m107.zs"
 #include "source/examples/weapons/aks74u.zs"
 #include "source/examples/weapons/akm.zs"
+#include "source/examples/weapons/uzi.zs"
 
 #include "source/examples/ammos.zs"
 #include "source/examples/bullets.zs"

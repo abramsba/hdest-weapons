@@ -547,3 +547,39 @@ class BAKM_762Mag : HDMagAmmo {
 			stop;
 	}
 }
+
+
+class UziMagazine : HDMagAmmo {
+	default{
+		hdmagammo.maxperunit 30;
+		hdmagammo.roundtype "HDPistolAmmo";
+		hdmagammo.roundbulk c_van_9mm_bulk;
+		hdmagammo.magbulk c_uzi_mag_bulk;
+		hdpickup.refid B_UZI_MAG_REFID;
+		tag "Uzi magazine";
+		inventory.icon "UZICA0";
+		inventory.pickupmessage "Picked up a Uzi magazine.";
+		scale 0.8;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt){
+		return "UZICA0", "PBRSA0", "HDPistolAmmo", 1.7;
+	}
+
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("b_uzi");
+	}
+
+	states{
+		spawn:
+			UZIC A -1;
+			stop;
+		spawnempty:
+			UZIC B -1{
+				brollsprite = true;
+				brollcenter = true;
+				roll = randompick(0, 0, 0, 0, 2, 2, 2, 2, 1, 3) * 90;
+			}
+			stop;
+	}
+}

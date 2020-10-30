@@ -52,6 +52,7 @@ DoomEdNums {
 	19030 = m107_with_acog
 	19031 = B_AKS74U
 	19032 = B_AKM
+	19033 = B_UZI
 
 	19100 = Glock_Random_Noammo_Noatta_Giver
 	19101 = mp5_noammo_noatta_giver
@@ -75,6 +76,7 @@ DoomEdNums {
 	20010 = M107Magazine
 	20011 = BAK_545Mag
 	20012 = BAKM_762Mag
+	20013 = UziMagazine
 
 	21000 = B_556_Box
 	21001 = BAmBox

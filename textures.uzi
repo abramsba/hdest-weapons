@@ -1,0 +1,44 @@
+
+sprite UZIPA0, 89, 44 {
+	XScale 3
+	YScale 3
+	Offset 45, 44
+	Patch "graphics/gunimages/uzi/base.png", 0, 0
+}
+
+sprite UZIPB0, 89, 36 {
+	XScale 3
+	YScale 3
+	Offset 45, 36
+	Patch "graphics/gunimages/uzi/empty.png", 0, 0
+}
+
+sprite UZIPC0, 111, 44 {
+	XScale 3
+	YScale 3
+	Offset 55, 44
+	Patch "graphics/gunimages/uzi/silencer.png", 0, 0
+}
+
+sprite UZIPD0, 111, 36 {
+	XScale 3
+	YScale 3
+	Offset 55, 36
+	Patch "graphics/gunimages/uzi/silencer_empty.png", 0, 0
+}
+
+// Clips
+
+sprite UZICA0, 7, 26 {
+	XScale 3
+	YScale 3
+	Offset 3, 26
+	Patch "graphics/mags/uziclip.png", 0, 0
+}
+
+sprite UZICB0, 7, 26 {
+	XScale 3
+	YScale 3
+	Offset 3, 26
+	Patch "graphics/mags/uziclipnb.png", 0, 0
+}
