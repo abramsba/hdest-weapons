@@ -51,22 +51,8 @@ OptionMenu "B_Options" {
 	statictext "See README.md for option description."
 	option "Replace mode", "B_Replace_Type", "B_Replace_Types"
 	option "AI Replace mode", "B_AI_Replace_Type", "B_AI_Replace_Types"
-	Slider "Scout Chance", "b_ai_scout_chance", 0, 100, 5
-	Slider "Rifleman Chance", "b_ai_rifleman_chance", 0, 100, 5
-	Slider "Shotgunner Chance", "b_ai_shotgunner_chance", 0, 100, 5
-	Slider "Ranger Chance", "b_ai_ranger_chance", 0, 100, 5
 	option "HUD Sights", "b_althud_mode", "B_Althud_options"
 	option "Attachment Spawn Mode", "b_attach_spawn_mode", "B_Attach_Spawn_Options"
 	option "Backpack Mode", "b_alt_backpack", "B_Alt_Backpack"
-
-	statictext ""
-	statictext "In development features - expect it to be broken"
-	statictext ""
-
 	option "Resource mode", "b_spawn_raw_resources", "B_Resource_Options"
-	option "Weapon Mag mode", "b_spawn_empty_mags", "B_Mag_Options"
-	option "Loose Mag mode", "b_spawn_no_ammo", "B_Mag_Options"
-	option "Weapon Jamming", "b_weapon_jamming", "B_Jam_Options"
-
-
 }

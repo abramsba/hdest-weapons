@@ -56,13 +56,7 @@ https://realm667.com/
 
 ## Permissions
 
-The source code for this project is licensed under GNU v3. You are free to fork this code and make your own adjustments.
-
-The gun art assets, sounds, and player sprite are not allowed to be reused in other projects. Permission is only granted if you plan on forking this repository to create your own modifications. Permission for other Doom mods, or other games, is not granted. 
-
-## Multiplayer
-
-Multiplayer compatibility has not been extensively tested. Use at your own risk for now. 
+Permission is granted to reuse any content from this repository as long as you include in your credits a link back to this repository, or a copy and paste of the above text.
 
 ## Player Skin
 

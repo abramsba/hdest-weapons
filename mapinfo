@@ -106,6 +106,14 @@ DoomEdNums {
 
 	29292 = Level1Warrior
 	29293 = Level1Target
-	29294 = AksTerror
-	29295 = AkmTerror
+	29294 = usmc_m14
+	29295 = usmc_m4c
+	29296 = usmc_mp5
+	29297 = usmc_m249
+	29298 = usmc_m4cm203
+	29299 = ru_vsr_akm
+	29300 = ru_vsr_aks
+	29301 = ru_emr_akm
+	29302 = ru_emr_aks
+	29303 = usmc_fostech
 }

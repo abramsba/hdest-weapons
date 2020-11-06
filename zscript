@@ -49,12 +49,10 @@ version "4.4"
 #include "source/examples/robots2.zs"
 
 #include "source/monsters/humanoid.zs"
-#include "source/monsters/ranger.zs"
-#include "source/monsters/rifleman.zs"
-#include "source/monsters/scout.zs"
-#include "source/monsters/shotgunner.zs"
-#include "source/monsters/wobbles.zs"
-#include "source/monsters/terrorist.zs"
+
+#include "source/monsters/new/ai_bubble.zs"
+#include "source/monsters/new/afrf.zs"
+#include "source/monsters/new/usm.zs"
 
 class BryanOperator : HDSkin {
 	default {
@@ -69,4 +67,49 @@ class BryanOperator : HDSkin {
 			stop;
 	}
 }
+
+class us_multicam : HDSkin {
+	default {
+		hdskin.mug "MOS";	
+	}
+	states {
+		spawn: 
+			UMCA A 0;
+			stop;
+		crouch:
+			UMCB A 0;
+			stop;
+	}
+}
+
+class afrf_vsr : HDSkin {
+	default {
+		hdskin.mug "MOS";
+		hdskin.notranslate 1;
+	}
+	states {
+		spawn: 
+			VSRA A 0;
+			stop;
+		crouch:
+			VSRB A 0;
+			stop;
+	}
+}
+
+class afrf_emr : HDSkin {
+	default {
+		hdskin.mug "MOS";
+		hdskin.notranslate 1;
+	}
+	states {
+		spawn: 
+			EMRA A 0;
+			stop;
+		crouch:
+			EMRB A 0;
+			stop;
+	}
+}
+
 

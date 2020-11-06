@@ -59,7 +59,7 @@ class B_MP5 : BHDWeapon {
 		hdweapon.refid               B_MP5_REFID;
 
 		BHDWeapon.BAltFrontSightImage "altm5i";
-		BHDWeapon.BAltBackSightImage "altm5s";
+		BHDWeapon.BAltBackSightImage  "altm5s";
 
 		BHDWeapon.BIronThreshold 10;
 

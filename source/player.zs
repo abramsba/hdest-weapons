@@ -184,22 +184,52 @@ class PlayerEvents : EventHandler {
 
 	void replaceAllAI(ReplaceEvent e) {
 		if (e.Replacee is "ZombieHideousTrooper") {
-			if (random(0, 100) <= b_ai_rifleman_chance) {
-				e.Replacement = "BRifleman";
-			}
-			else if (random(0, 100) <= b_ai_scout_chance) {
-				e.Replacement = "BScout";
-			}
+			string possible[18] = {
+				"op_uzi",
+				"usmc_mp5",
+				"usmc_mp5",
+				"usmc_mp5",
+				"usmc_m4c",
+				"usmc_m4c",
+				"ru_aks",
+				"usmc_mp5",
+				"usmc_mp5",
+				"usmc_mp5",
+				"usmc_m4c",
+				"ru_aks",
+				"usmc_m4c",
+				"usmc_mp5",
+				"usmc_mp5",
+				"usmc_mp5",
+				"ru_aks",
+				"usmc_m4cm203"
+			};
+			e.Replacement = possible[random(0, 17)];
 		}
 		else if (e.Replacee is "HideousShotgunGuy") {
 			if (random(0, 100) < b_ai_shotgunner_chance) {
-				e.Replacement = "BShotgunner";
+				e.Replacement = "usmc_fostech";
 			}
 		}
 		else if (e.Replacee is "VulcanetteGuy") {
-			if (random(0, 100) < b_ai_ranger_chance) {
-				e.Replacement = "BRanger";
-			}
+			string possible[15] = {
+				"usmc_m14",
+				"usmc_m249",
+				"usmc_m249",
+				"usmc_m249",
+				"umsc_m14",
+				"ru_akm",
+				"usmc_m249",
+				"usmc_m249",
+				"usmc_m249",
+				"ru_akm",
+				"umsc_m14",
+				"usmc_m249",
+				"usmc_m249",
+				"usmc_m249",
+				"op_m107"
+			};
+			e.Replacement = possible[random(0, 14)];
 		}
 		
 	}

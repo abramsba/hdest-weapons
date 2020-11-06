@@ -32,6 +32,7 @@ class HumanoidBase : ZombieStormtrooper {
 
 	bool silenced;
 	bool scoped;
+	bool shooting;
 
 	int silId;
 	Class<BaseBarrelAttachment> silClass;
@@ -50,6 +51,13 @@ class HumanoidBase : ZombieStormtrooper {
 	}
 
 	virtual void initializeAttachments() {}
+	virtual void reloadStart() {
+		magIsOut = true;
+	}
+	virtual void reloadFinish() {
+		magIsOut = false;
+	}
+	bool magIsOut;
 
 	override void deathdrop(){
 		HDWeapon wp = HDWeapon(Spawn(hWeaponClass, pos));
@@ -65,6 +73,12 @@ class HumanoidBase : ZombieStormtrooper {
 				wep.setScopeSerialId(sightId);
 				wep.scopeClass = sightClass;
 			}
+		}
+		if (magIsOut) {
+			wp.weaponStatus[I_MAG] = -1;
+		}
+		else {
+			wp.weaponStatus[I_MAG] = mag;
 		}
 		wp.bdropped = true;
 		wp.addz(40);
@@ -175,6 +189,10 @@ class HumanoidBase : ZombieStormtrooper {
 			#### A 0 A_Jump(256, "TurnToAim");
 
 		TurnToAim:
+			#### E 0 {
+				shooting = true;
+				console.printf("shoot");
+			}
 			#### E 2 A_FaceTarget(turnAmount, turnAmount);
 			#### A 0 A_JumpIfTargetInLOS(2);
 			#### A 0 A_Jump(256, "See");
@@ -188,6 +206,9 @@ class HumanoidBase : ZombieStormtrooper {
 			#### A 0 A_Jump(256, "Shoot");
 
 		Shoot:
+			#### F 0 {
+				shooting = true;
+			}
 			#### F 0 A_JumpIf(jammed, "jammed");
 			#### F 1 Bright Light("SHOT") {
 				if (mag < 1) {
@@ -235,6 +256,9 @@ class HumanoidBase : ZombieStormtrooper {
 			#### A 0 A_Jump(256, "PostShot");
 
 		PostShot:
+			#### F 0 {
+				shooting = false;
+			}
 			#### E 5 {
 				if (!random(0, 127)) {
 					A_StartSound(activeSound, CHAN_VOICE);
@@ -299,6 +323,7 @@ class HumanoidBase : ZombieStormtrooper {
 
 		Reload:
 			#### A 4 {
+				reloadStart();
 				A_StartSound("weapons/rifleclick2");
 				bFrightened = true;
 			}
@@ -319,6 +344,7 @@ class HumanoidBase : ZombieStormtrooper {
 				A_StartSound("weapons/rifleclick2", 8);
 				mag = invoker.hMaxMag;
 				bFrightened = false;
+				reloadFinish();
 			}
 			#### CCBB 2 {
 				HDMobAI.wander(self, true);
@@ -399,6 +425,9 @@ class HumanoidBase : ZombieStormtrooper {
 			#### A 0 A_Jump(256, "See");
 
 		Melee:
+			#### A 0 {
+				console.printf("melee");
+			}
 			#### C 8 A_FaceTarget();
 			#### D 4;
 			#### E 4 {

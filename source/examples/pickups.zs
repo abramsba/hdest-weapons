@@ -391,7 +391,6 @@ class RandomBryanPickup : HDInvRandomSpawner {
 	default {
 		dropitem "RandomMagPickup", 256, 1;
 		dropitem "RandomAmmoPickup", 256, 1;
-		dropitem "RandomWeaponPickup", 256, 1;
 	}
 }
 
