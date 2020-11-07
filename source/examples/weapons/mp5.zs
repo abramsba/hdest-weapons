@@ -273,7 +273,7 @@ class B_MP5 : BHDWeapon {
 					invoker.bLayerSight = 999;
 				}
 				else {
-					invoker.bLayerSight = 104;
+					invoker.bLayerSight = 105;
 				}
 			}
 			Loop;
@@ -975,7 +975,7 @@ class B_MP5_M203 : BaseGLRifle {
 					invoker.bLayerSight = 999;
 				}
 				else {
-					invoker.bLayerSight = 104;
+					invoker.bLayerSight = 105;
 				}
 			}
 			Loop;
