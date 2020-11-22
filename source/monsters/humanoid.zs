@@ -191,7 +191,6 @@ class HumanoidBase : ZombieStormtrooper {
 		TurnToAim:
 			#### E 0 {
 				shooting = true;
-				console.printf("shoot");
 			}
 			#### E 2 A_FaceTarget(turnAmount, turnAmount);
 			#### A 0 A_JumpIfTargetInLOS(2);
