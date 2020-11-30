@@ -67,3 +67,48 @@ class BryanOperator : HDSkin {
 			stop;
 	}
 }
+
+class ru_emr : HDSkin {
+	default {
+		hdskin.mug "MOS";	
+		hdskin.translate false;
+	}
+	states {
+		spawn: 
+			EMRA A 0;
+			stop;
+		crouch:
+			EMRB A 0;
+			stop;
+	}
+}
+
+class ru_vsr : HDSkin {
+	default {
+		hdskin.mug "MOS";	
+		hdskin.translate false;
+	}
+	states {
+		spawn: 
+			VSRA A 0;
+			stop;
+		crouch:
+			VSRB A 0;
+			stop;
+	}
+}
+
+class us_mc : HDSkin {
+	default {
+		hdskin.mug "MOS";	
+		hdskin.translate false;
+	}
+	states {
+		spawn: 
+			UMCA A 0;
+			stop;
+		crouch:
+			UMCB A 0;
+			stop;
+	}
+}

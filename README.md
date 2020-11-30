@@ -60,9 +60,23 @@ Permission is granted to reuse any content from this repository as long as you i
 
 ## Player Skin
 
-This pack includes a tactical operator player skin. To use run the command `hd_skin BryanOperator`. 
+To see list of avaliable skins, press `~` and type command `hd_skins`. The following are available:
 
-<p><img src="static/operator.png"></p>
+* `us_mc`
+* `BryanOperator`
+
+<p>
+	<img src="static/operator.png">
+	<img src="static/usmc.png">
+</p>
+
+* `ru_vsr`
+* `ru_emr`
+
+<p>
+	<img src="static/emr.png">
+	<img src="static/vsr.png">
+</p>
 
 ## Game Options
 

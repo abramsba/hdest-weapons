@@ -424,9 +424,6 @@ class HumanoidBase : ZombieStormtrooper {
 			#### A 0 A_Jump(256, "See");
 
 		Melee:
-			#### A 0 {
-				console.printf("melee");
-			}
 			#### C 8 A_FaceTarget();
 			#### D 4;
 			#### E 4 {

@@ -3,8 +3,8 @@ class B_Uzi : BaseStandardRifle {
 	default {
 		+hdweapon.fitsinbackpack
 		weapon.selectionorder        20;
-		weapon.slotnumber            4;
-		weapon.slotpriority          1;
+		weapon.slotnumber            2;
+		weapon.slotpriority          3;
 		inventory.pickupsound        "misc/w_pkup";
 		inventory.pickupmessage      "You got the Uzi.";
 		scale                        0.7;
