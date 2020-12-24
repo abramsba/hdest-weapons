@@ -48,12 +48,7 @@ class THERPBot:HDUPK{
 	int botid;
 
 	override bool cancollidewith(actor other,bool passive){return other.bmissile||HDPickerUpper(other);}
-	override void ongrab(actor other){
-		if(ishostile(other)){
-			bmissilemore=false;
-			setstatelabel("off");
-		}
-	}
+
 	override void Die(actor source,actor inflictor,int dmgflags){
 		super.Die(source,inflictor,dmgflags);
 		if(self)bsolid=true;
