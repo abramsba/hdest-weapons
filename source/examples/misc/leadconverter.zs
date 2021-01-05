@@ -417,6 +417,7 @@ class B_BulletAssembler : HDWeapon {
 					caseSprite = "BC50A7A3";
 					ballClass = "B_50BmgBall";
 					ballSprite = "B50TA0";
+					bulletClass = "B50BMGAmmo";
 				}
 
 				int caseCount = invoker.owner.countinv(caseClass);
