@@ -85,7 +85,7 @@ class B_MP5 : BHDWeapon {
 		SpawnMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrel");
 						}
@@ -177,7 +177,7 @@ class B_MP5 : BHDWeapon {
 		SpawnNoMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrelEmpty");
 						}
@@ -497,7 +497,7 @@ class B_MP5 : BHDWeapon {
 	override string, double GetPickupSprite() {
 		if(magazineGetAmmo() > -1) {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "MP5UW0", 1.;
 					}
@@ -537,7 +537,7 @@ class B_MP5 : BHDWeapon {
 		}
 		else {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "MP5UX0", 1.;
 					}
@@ -731,7 +731,7 @@ class B_MP5_M203 : BaseGLRifle {
 		SpawnMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrel");
 						}
@@ -823,7 +823,7 @@ class B_MP5_M203 : BaseGLRifle {
 		SpawnNoMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrelEmpty");
 						}
@@ -1178,7 +1178,7 @@ class B_MP5_M203 : BaseGLRifle {
 	override string, double GetPickupSprite() {
 		if(magazineGetAmmo() > -1) {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "M5GUW0", 1.;
 					}
@@ -1218,7 +1218,7 @@ class B_MP5_M203 : BaseGLRifle {
 		}
 		else {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "M5GUX0", 1.;
 					}

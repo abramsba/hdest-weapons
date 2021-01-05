@@ -94,6 +94,7 @@ class B_BallCrafter : HDWeapon {
 				else if (invoker.mode == 2) {
 					leadNeeded = 25;
 					brassNeeded = 10;
+					ballClass = "B_50BmgBall";
 				}
 
 				int leadCount = invoker.owner.CountInv("B_Lead");
@@ -411,7 +412,11 @@ class B_BulletAssembler : HDWeapon {
 					bulletClass = "B762x51Ammo";
 				}
 				else if (invoker.mode == 2) {
-
+					powderRequired = 15;
+					caseClass = "B50BMGBrass";
+					caseSprite = "BC50A7A3";
+					ballClass = "B_50BmgBall";
+					ballSprite = "B50TA0";
 				}
 
 				int caseCount = invoker.owner.countinv(caseClass);

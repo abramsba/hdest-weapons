@@ -75,6 +75,10 @@ class B_RPGLauncher : BaseRPG {
 		BHDWeapon.BAmmoHudScale 0.8;
 	}
 
+	override void InitializeWepStats (bool idfa) {
+		weaponspecial=0;
+	}
+
 	override string, double GetPickupSprite() {
 		if(chambered()) {
 			return bSpriteWithMag, 1.;

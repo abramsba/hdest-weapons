@@ -438,6 +438,7 @@ class BMagazineBox : HDUPK {
 		tag "Bryan's Resource Box";
 	}
 
+	
 	static const string classNames[] = {
 		"B556Mag",
 		"BM249Mag",
@@ -447,11 +448,15 @@ class BMagazineBox : HDUPK {
 		"GlockMagazine"
 	};
 
+	override bool OnGrab(actor grabber){
+		setstatelabel("tap");
+		return false;
+	}
+
 	states {
 		spawn:
 			BBOX C -1;
 			stop;
-		grab:
 		tap:
 			---- A 0 {
 				invoker.vel += (0, 0, 4);
