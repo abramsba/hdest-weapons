@@ -257,6 +257,8 @@ class B_Sight_Holo_Red : BaseHoloSight {
 		HDPickup.RefID "hrd";
 		BaseSightAttachment.BackOffX 0;
 		//BaseSightAttachment.BackOffY 47;
+		BaseSightAttachment.bbackAltImage "holsA";
+		BaseSightAttachment.bfrontAltImage "holira";
 		Inventory.PickupMessage "Picked up a EOTech red-dot sight.";
 		Scale 0.4;
 	}
