@@ -252,6 +252,8 @@ class B_Sight_Holo_Red : BaseHoloSight {
 		BaseAttachment.SerialId B_SIGHT_HOLO_ID;
 		BaseAttachment.BaseSprite "HOLG";
 		BaseAttachment.BaseFrame 0;
+		BaseSightAttachment.bbackAltImage "holsA";
+		BaseSightAttachment.bfrontAltImage "holira";
 		Tag "EOTech Holographic Sight";
 		Inventory.Icon "SCPPC0";
 		HDPickup.RefID "hrd";
