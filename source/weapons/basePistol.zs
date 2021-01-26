@@ -8,6 +8,14 @@ class BasePistol : BaseStandardRifle {
 		return ResolveState("SpawnNoMag");
 		
 	}
+	
+	override void InitializeWepStats (bool idfa) {
+		weaponStatus[I_MAG] = bMagazineCapacity - 1;
+		weaponStatus[I_FLAGS] |= F_CHAMBER;
+		weaponspecial=0;
+		//console.printf("%s %i", getClassName(), getBarrelSerialID());
+		//setchamber();
+	}	
 
 	override void DrawHUDStuff(HDStatusBar sb,HDWeapon hdw,HDPlayerPawn hpl){
 		BHDWeapon basicWep = BHDWeapon(hdw);
@@ -50,10 +58,12 @@ class BasePistol : BaseStandardRifle {
 			bobb.y=clamp(bobb.y,-8,8);
 		}
 
+
 		sb.drawImage(getFrontSightImage(hpl), getFrontSightOffsets() + bobb, sb.DI_SCREEN_CENTER | sb.DI_ITEM_TOP, alpha: 0.9, scale: scc);
 
 		sb.SetClipRect(cx,cy,cw,ch);
 		sb.drawimage(getBackSightImage(hpl), getBackSightOffsets() + bob, sb.DI_SCREEN_CENTER | sb.DI_ITEM_TOP, scale:scc);
+
 
 		//sb.drawImage("calib", (0, 0), sb.DI_SCREEN_CENTER | sb.DI_ITEM_CENTER, alpha: 0.3);
 	}
