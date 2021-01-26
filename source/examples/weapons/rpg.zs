@@ -75,6 +75,13 @@ class B_RPGLauncher : BaseRPG {
 		BHDWeapon.BAmmoHudScale 0.8;
 	}
 
+	override void InitializeWepStats (bool idfa) {
+		weaponStatus[I_MAG] = bMagazineCapacity - 1;
+		weaponStatus[I_FLAGS] |= F_CHAMBER;
+		weaponspecial=0;
+		//console.printf("%s %i", getClassName(), getBarrelSerialID());
+		//setchamber();
+	}
 	override string, double GetPickupSprite() {
 		if(chambered()) {
 			return bSpriteWithMag, 1.;

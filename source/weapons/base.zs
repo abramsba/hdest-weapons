@@ -383,6 +383,7 @@ class BHDWeapon : HDWeapon {
 	override void InitializeWepStats (bool idfa) {
 		weaponStatus[I_MAG] = bMagazineCapacity - 1;
 		weaponStatus[I_FLAGS] |= F_CHAMBER;
+		weaponspecial=1337;
 		//console.printf("%s %i", getClassName(), getBarrelSerialID());
 		//setchamber();
 	}

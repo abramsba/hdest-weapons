@@ -49,6 +49,11 @@ class B50BMGAmmo : BRoundAmmo {
 		SplitPickupBoxableRound(10, 50, "B_50BMG_Box", "BX50A0", "BG50A7A3");
 	}
 
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("b_m107");
+		itemsthatusethis.push("M107Magazine");
+	}
+
 	states {
 		spawn:
 			BG50 A -1;
@@ -141,7 +146,7 @@ class B545Ammo : BRoundAmmo {
 		Inventory.Icon "B54BA7A3";
 	}
 	override string pickupmessage(){
-		return "Picked up a stray 5.56x45mm round.";
+		return "Picked up a stray 5.45x39mm round.";
 	}
 
 	override void SplitPickup() {
@@ -458,6 +463,7 @@ class BAmBox : HDUPK {
 		tag "Bryan's Ammo Box";
 	}
 
+
 	static const string magazines[] = {
 		"B556Mag",
 		"BM249Mag",
@@ -467,6 +473,8 @@ class BAmBox : HDUPK {
 		"GlockMagazine"
 	};
 
+
+
 	static const string bullets[] = {
 		"B_556_Box",
 		"B_556_Box",
@@ -475,12 +483,16 @@ class BAmBox : HDUPK {
 		"B_556_Box",
 		"B_762_Box"
 	};
+	
+	override bool OnGrab(actor grabber){
+		setstatelabel("tap");
+		return false;
+	}
 
 	states {
 		spawn:
 			AMBX A -1;
 			stop;
-		grab:
 		tap:
 			---- A 0 {
 				invoker.vel += (0, 0, 4);
@@ -554,11 +566,16 @@ class BResourceBox : HDUPK {
 		"B_BrassSheets"
 	};
 
+	override bool OnGrab(actor grabber){
+		setstatelabel("tap");
+		return false;
+	}
+
+
 	states {
 		spawn:
 			RSBX A -1;
 			stop;
-		grab:
 		tap:
 			---- A 0 {
 				invoker.vel += (0, 0, 4);

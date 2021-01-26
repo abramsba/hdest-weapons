@@ -93,7 +93,7 @@ class b_M249 : BHDWeapon {
 		SpawnMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrel");
 						}
@@ -185,7 +185,7 @@ class b_M249 : BHDWeapon {
 		SpawnNoMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrelEmpty");
 						}
@@ -642,7 +642,7 @@ class b_M249 : BHDWeapon {
 	override string, double GetPickupSprite() {
 		if(magazineGetAmmo() > -1) {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+ 				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "M29UW0", 1.;
 					}
@@ -682,7 +682,7 @@ class b_M249 : BHDWeapon {
 		}
 		else {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight")) {
 					if (barrelClass && miscClass) {
 						return "M29UX0", 1.;
 					}

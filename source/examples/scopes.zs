@@ -252,12 +252,14 @@ class B_Sight_Holo_Red : BaseHoloSight {
 		BaseAttachment.SerialId B_SIGHT_HOLO_ID;
 		BaseAttachment.BaseSprite "HOLG";
 		BaseAttachment.BaseFrame 0;
+		BaseSightAttachment.bbackAltImage "holsA";
+		BaseSightAttachment.bfrontAltImage "holira";
 		Tag "EOTech Holographic Sight";
 		Inventory.Icon "SCPPC0";
 		HDPickup.RefID "hrd";
 		BaseSightAttachment.BackOffX 0;
 		//BaseSightAttachment.BackOffY 47;
-		Inventory.PickupMessage "Picked up a red-dot round sight.";
+		Inventory.PickupMessage "Picked up a EOTech red-dot sight.";
 		Scale 0.4;
 	}
 

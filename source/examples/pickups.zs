@@ -622,11 +622,15 @@ class BAttachmentBox : HDUPK {
 		"B_Scope_10x"
 	};
 
+	override bool OnGrab(actor grabber){
+		setstatelabel("tap");
+		return false;
+	}
+
 	states {
 		spawn:
 			BBOX D -1;
 			stop;
-		grab:
 		tap:
 			---- A 0 {
 				invoker.vel += (0, 0, 4);

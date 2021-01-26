@@ -80,7 +80,7 @@ class b_FauxtechOrigin : BaseShotgun {
 		SpawnMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight") && !(invoker.scopeClass is "B_Faux_Sight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrel");
 						}
@@ -174,7 +174,7 @@ class b_FauxtechOrigin : BaseShotgun {
 		SpawnNoMag:
 			TNT1 A 0 {
 				if (invoker.scopeClass) {
-					if (invoker.scopeClass is "BaseAcog" || invoker.scopeClass is "BaseFullDotSight") {
+					if (!(invoker.scopeClass is "BaseHoloSight") && !(invoker.scopeClass is "BaseCompactDotSight") && !(invoker.scopeClass is "B_Faux_Sight")) {
 						if (invoker.barrelClass && invoker.miscClass) {
 							return ResolveState("HighMiscBarrelEmpty");
 						}
@@ -358,7 +358,7 @@ class b_FauxtechOrigin : BaseShotgun {
 	override string, double GetPickupSprite() {
 		if(magazineHasAmmo()) {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight") && !(scopeClass is "B_Faux_Sight")) {
 					if (barrelClass && miscClass) {
 						return "FOSUW0", 1.;
 					}
@@ -398,7 +398,7 @@ class b_FauxtechOrigin : BaseShotgun {
 		}
 		else {
 			if (scopeClass) {
-				if (scopeClass is "BaseAcog" || scopeClass is "BaseFullDotSight") {
+				if (!(scopeClass is "BaseHoloSight") && !(scopeClass is "BaseCompactDotSight") && !(scopeClass is "B_Faux_Sight")) {
 					if (barrelClass && miscClass) {
 						return "FOSUX0", 1.;
 					}
