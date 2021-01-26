@@ -50,6 +50,8 @@ Play testing: Shredder, a1337spy
 
 Special thanks to Shredder for being the Hideous Destructor consultant. 
 
+Additional thanks to D.W. for adding minor fixes for HD-4.5.0.
+
 Textures used in hub map taken from Kingpin texture pack on Realm667
 
 https://realm667.com/
