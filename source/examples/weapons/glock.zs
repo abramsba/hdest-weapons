@@ -72,10 +72,6 @@ class b_Glock : BasePistol {
 		BHDWeapon.BRecoilYHigh 2.1;	
 	}
 
-	override void InitializeWepStats (bool idfa) {
-		weaponspecial=0;
-	}
-
 	states {
 		Spawn:
 			GLKP A 0 GetMagStatePistol();
