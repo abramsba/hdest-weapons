@@ -49,6 +49,11 @@ class B50BMGAmmo : BRoundAmmo {
 		SplitPickupBoxableRound(10, 50, "B_50BMG_Box", "BX50A0", "BG50A7A3");
 	}
 
+	override void GetItemsThatUseThis() {
+		itemsthatusethis.push("b_m107");
+		itemsthatusethis.push("M107Magazine");
+	}
+
 	states {
 		spawn:
 			BG50 A -1;
@@ -467,6 +472,8 @@ class BAmBox : HDUPK {
 		"b762_m14_mag",
 		"GlockMagazine"
 	};
+
+
 
 	static const string bullets[] = {
 		"B_556_Box",
