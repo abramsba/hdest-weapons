@@ -139,8 +139,8 @@ class FosImprovedChoke : BaseChokeAttachment {
 		Tag "Improved cylinder choke";
 		Inventory.Icon "CHKAA0";
 		Inventory.PickupMessage "Picked up a improved cylinder choke.";
-		BaseChokeAttachment.Clow -7;
-		BaseChokeAttachment.Chigh 3;
+		BaseChokeAttachment.Clow -0.5;
+		BaseChokeAttachment.Chigh 4;
 		Scale 0.4;
 	}
 
@@ -167,8 +167,8 @@ class FosModifiedChoke : BaseChokeAttachment {
 		Tag "Improved modified choke";
 		Inventory.Icon "CHKAB0";
 		Inventory.PickupMessage "Picked up a modified choke.";
-		BaseChokeAttachment.Clow -4;
-		BaseChokeAttachment.Chigh 2;
+		BaseChokeAttachment.Clow -1;
+		BaseChokeAttachment.Chigh 2.5;
 		Scale 0.4;
 	}
 
@@ -195,7 +195,7 @@ class FosFullChoke : BaseChokeAttachment {
 		Tag "Full choke";
 		Inventory.Icon "CHKAC0";
 		Inventory.PickupMessage "Picked up a full choke.";
-		BaseChokeAttachment.Clow -2;
+		BaseChokeAttachment.Clow -1.5;
 		BaseChokeAttachment.Chigh 1;
 		Scale 0.4;
 	}

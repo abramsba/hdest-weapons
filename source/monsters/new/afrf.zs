@@ -31,7 +31,6 @@ class ru_vsr_base : ai_with_bubble_base {
 				if (!gunInst) {
 					gunInst = getGun();
 				}
-				translation = 0;
 			}
 			Goto Super::Spawn2;
 	}

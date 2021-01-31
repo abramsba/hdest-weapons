@@ -19,6 +19,8 @@ class BaseShotgun : BaseStandardRifle {
 		sb.DrawImage(chokeImage, (-26, -9), sb.DI_SCREEN_CENTER_BOTTOM, scale: (0.5, 0.5));
 	}
 
+	static double getshotpower(){return frandom(0.9,1.1);}
+
 	states {
 
 		UnloadChamber:
@@ -60,7 +62,6 @@ class BaseShotgun : BaseStandardRifle {
 				bool silenced = invoker.barrelClass is "BaseSilencerAttachment";
 				string sound = silenced ? invoker.bSFireSound : invoker.bFireSound;
 
-				A_StartSound(sound, CHAN_WEAPON, CHANF_OVERLAP);
 				A_ZoomRecoil(max(0.95, 1. -0.05 * invoker.fireMode()));
 				double burn = max(invoker.heatAmount(), invoker.boreStretch()) * 0.01;
 				//HDBulletActor.FireShell(self, invoker.bBulletClass, spread: burn > 1.2 ? burn : 0);
@@ -69,13 +70,17 @@ class BaseShotgun : BaseStandardRifle {
 
 				HDBulletActor.FireBullet(self, "HDB_wad");
 
-				int spreadlow = -10, spreadhigh = 5;
+				int spreadlow = 0, spreadhigh = 6;
+
 				if (invoker.barrelClass is "BaseChokeAttachment") {
 					spreadlow = GetDefaultByType((Class<BaseChokeAttachment>)(invoker.barrelClass)).Clow;
 					spreadhigh = GetDefaultByType((Class<BaseChokeAttachment>)(invoker.barrelClass)).Chigh;
 				}
+				double spread = spreadhigh, speedfactor =1., shotpower=getshotpower();
+				spread*=shotpower;
+				speedfactor*=shotpower;
 				let p = HDBulletActor.FireBullet(self, invoker.bBulletClass, 
-					spread: spreadhigh, speedfactor: 1.0, amount: 15);
+					spread: spread, speedfactor: speedfactor, amount: 10);
 
 				double muzzleMul = 1.0;
 				PlayerInfo pi = players[invoker.owner.playerNumber()];
@@ -91,8 +96,8 @@ class BaseShotgun : BaseStandardRifle {
 				A_MuzzleClimb(
 					-frandom(0.1,0.1), -frandom(0,0.1),
 					-0.2,              -frandom(0.3,0.4),
-					frandom(invoker.BRecoilXLow, invoker.BRecoilXHigh) * muzzleMul, 
-					-frandom(invoker.BRecoilYLow, invoker.BRecoilYHigh) * muzzleMul
+					frandom(invoker.BRecoilXLow, invoker.BRecoilXHigh) * (muzzleMul*shotpower), 
+					-frandom(invoker.BRecoilYLow, invoker.BRecoilYHigh) * (muzzleMul*shotpower)
 				);
 				//invoker.addHeat(random(3, 5));
 				invoker.unchamber();
@@ -113,6 +118,8 @@ class BaseShotgun : BaseStandardRifle {
 					0,
 					SXF_NOCHECKPOSITION | SXF_TRANSFERPITCH);
 
+				A_StartSound(sound, CHAN_WEAPON, CHANF_OVERLAP);
+				distantnoise.make(p,"world/shotgunfar");
 				A_AlertMonsters();
 			}
 			#### # 0 { 

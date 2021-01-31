@@ -551,7 +551,7 @@ class ShotgunHumanoidBase : HumanoidBase {
 					invoker.hBulletClass, 
 					spread: 6, 
 					speedfactor: 1.0, 
-					amount: 15);
+					amount: 10);
 				A_SpawnItemEx(invoker.hSpentClass,
 					cos(pitch) * 10,
 					0,

@@ -188,7 +188,7 @@ class BasePistol : BaseStandardRifle {
 				}
 				else {
 					HDMagAmmo.GiveMag(self, invoker.bMagazineClass, inMag);
-					A_StartSound("weapons/pocket", CHAN_WEAPON);
+					A_StartSound("weapons/pocket", CHAN_WEAPON,CHANF_OVERLAP);
 				}
 				return ResolveState("MagOut");
 			}
@@ -200,7 +200,7 @@ class BasePistol : BaseStandardRifle {
 					return ResolveState("ReloadEnd");
 				}
 
-				A_StartSound("weapons/pocket", CHAN_WEAPON);
+				A_StartSound("weapons/pocket", CHAN_WEAPON,CHANF_OVERLAP);
 				A_SetTics(10);
 				return ResolveState(NULL);
 			}
