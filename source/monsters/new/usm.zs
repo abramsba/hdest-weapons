@@ -346,7 +346,7 @@ class op_uzi : op_base {
 	default {
 		HumanoidBase.hWeaponClass     "B_Uzi";
 		HumanoidBase.hBulletClass     "HDB_9";
-		HumanoidBase.hMaxMag          30;
+		HumanoidBase.hMaxMag          32;
 		HumanoidBase.hMagazineClass   "UziMagazine";
 		HumanoidBase.hSpentClass      "HDSpent9mm";
 		HumanoidBase.hFireSound       "weapons/uzi/fire";
