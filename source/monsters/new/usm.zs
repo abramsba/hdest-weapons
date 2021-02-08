@@ -37,6 +37,31 @@ class Mp5Bubble : FlipXBubble {
 			Stop;
 	}
 }
+class UziBubble : FlipXBubble {
+	states {
+		spawn:
+			UZIP A -1;
+			Stop;
+		empty:
+			UZIP B -1;
+			Stop;
+	}
+}
+
+class M107Bubble : FlipXBubble {
+	default {
+		AiBubble.fora 27;
+		AiBubble.forc 28;
+	}
+	states {
+		spawn:
+			M17P E -1;
+			Stop;
+		empty:
+			M17P F -1;
+			Stop;
+	}
+}
 
 class M14AcogBubble : FlipXBubble {
 	default {
@@ -91,7 +116,6 @@ class usmc_base : ai_with_bubble_base {
 				if (!gunInst) {
 					gunInst = getGun();
 				}
-				translation = 0;
 			}
 			Goto Super::Spawn2;
 	}
@@ -157,7 +181,7 @@ class usmc_m14 : usmc_base {
 	default {
 		HumanoidBase.hWeaponClass     "b_m14";
 		HumanoidBase.hBulletClass     "HDB_762x51";
-		HumanoidBase.hMaxMag          30;
+		HumanoidBase.hMaxMag          20;
 		HumanoidBase.hMagazineClass   "b762_m14_mag";
 		HumanoidBase.hSpentClass      "B762x51Spent";
 		HumanoidBase.hFireSound       "weapons/m14/fire";
@@ -278,7 +302,7 @@ class usmc_fostech : usmc_base {
 					invoker.hBulletClass, 
 					spread: 6, 
 					speedfactor: 1.0, 
-					amount: 15);
+					amount: 10);
 				A_SpawnItemEx(invoker.hSpentClass,
 					cos(pitch) * 10,
 					0,
@@ -302,33 +326,6 @@ class usmc_fostech : usmc_base {
 }
 
 // op
-
-class UziBubble : AiBubble {
-	states {
-		spawn:
-			UZIP A -1;
-			Stop;
-		empty:
-			UZIP B -1;
-			Stop;
-	}
-}
-
-class M107Bubble : FlipXBubble {
-	default {
-		AiBubble.fora 27;
-		AiBubble.forc 28;
-	}
-	states {
-		spawn:
-			M17P E -1;
-			Stop;
-		empty:
-			M17P F -1;
-			Stop;
-	}
-}
-
 class op_base : ai_with_bubble_base {
 	default {
 		translation "112:127=236:239";
@@ -349,7 +346,7 @@ class op_uzi : op_base {
 	default {
 		HumanoidBase.hWeaponClass     "B_Uzi";
 		HumanoidBase.hBulletClass     "HDB_9";
-		HumanoidBase.hMaxMag          30;
+		HumanoidBase.hMaxMag          32;
 		HumanoidBase.hMagazineClass   "UziMagazine";
 		HumanoidBase.hSpentClass      "HDSpent9mm";
 		HumanoidBase.hFireSound       "weapons/uzi/fire";
@@ -455,7 +452,6 @@ class op_m107 : op_base {
 				else {
 					A_StartSound(invoker.hFireSound);
 				}
-
 				HDBulletActor.FireBullet(self, invoker.hBulletClass, speedfactor:1.0);
 				A_SpawnItemEx(invoker.hSpentClass,
 					cos(pitch) * 10,

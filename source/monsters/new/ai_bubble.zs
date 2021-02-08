@@ -71,7 +71,6 @@ class ai_with_bubble_base : HumanoidBase {
 		activesound "";
 	}
 	AiBubble gunInst;
-	
 	override void deathdrop() {
 		if (gunInst) {
 			gunInst.destroy();
@@ -95,5 +94,14 @@ class ai_with_bubble_base : HumanoidBase {
 
 	virtual AiBubble getGun() {
 		return null;
+	}
+	states{
+	raise:
+				---- A 0 {
+				if (!gunInst) {
+					gunInst = getGun();
+				}
+			}
+			Goto Super::raise;
 	}
 }

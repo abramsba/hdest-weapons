@@ -32,7 +32,7 @@ weapons/m14/boltforward 	"sounds/m14/boltforward.wav"
 weapons/m14/clipeject 		"sounds/m14/clipeject.wav"
 weapons/m14/clipinsert 		"sounds/m14/clipinsert.wav"
 weapons/m14/firefar    		"sounds/m14/firefar.wav"
-weapons/m15/click           "sounds/m14/click.wav"
+weapons/m14/click           "sounds/m14/click.wav"
 
 weapons/fauxtech/fire       	"sounds/fauxtech/fire.wav"
 weapons/fauxtech/silentfire     "sounds/fauxtech/silentfire.wav"

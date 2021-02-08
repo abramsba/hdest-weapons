@@ -126,19 +126,19 @@ const c_m249_bulk = 200;
 const c_m249_pouch_bulk = 15;
 
 const c_545_round_bulk = 0.30;
-const c_545_spent_bulk = c_545_round_bulk / 0.7;
+const c_545_spent_bulk = c_545_round_bulk * 0.7;
 const c_545_load_bulk = c_545_round_bulk / 2;
 
 const c_556_round_bulk = 0.35;
-const c_556_spent_bulk = c_556_round_bulk / 0.7;
+const c_556_spent_bulk = c_556_round_bulk * 0.7;
 const c_556_load_bulk = c_556_round_bulk / 2;
 
 const c_762_round_bulk = 1.2;
-const c_762_spent_bulk = c_762_round_bulk / 0.6;
+const c_762_spent_bulk = c_762_round_bulk * 0.6;
 const c_762_load_bulk = c_762_round_bulk / 2;
 
 const c_762_sov_round_bulk = 1;
-const c_762_sov_spent_bulk = c_762_sov_round_bulk / 0.6;
+const c_762_sov_spent_bulk = c_762_sov_round_bulk * 0.6;
 const c_762_sov_load_bulk = c_762_sov_round_bulk / 2;
 
 const c_rpg_bulk = 75;
@@ -147,14 +147,14 @@ const c_rpg_charge_bulk = 17.2;
 
 const c_raw_resource_bulk = 0.1;
 
-const c_van_9mm_bulk = 0.65;
-const c_9mm_load_bulk = c_van_9mm_bulk / 2;
+const c_van_9mm_bulk = ENC_9;
+const c_9mm_load_bulk = ENC_9_LOADED;
 
-const c_van_shell_bulk = 1.8;
-const c_shell_load_bulk = c_van_shell_bulk / 2;
+const c_van_shell_bulk = ENC_SHELL;
+const c_shell_load_bulk = ENC_SHELLLOADED;
 
-const c_van_rocket_bulk = 24.4;
-const c_rocket_load_bulk = c_van_rocket_bulk / 4;
+const c_van_rocket_bulk = ENC_ROCKET;
+const c_rocket_load_bulk = ENC_ROCKETLOADED;
 
 const c_50bmg_bulk = 1.9;
 const c_m107_bulk = 300;

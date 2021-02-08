@@ -473,8 +473,6 @@ class BAmBox : HDUPK {
 		"GlockMagazine"
 	};
 
-
-
 	static const string bullets[] = {
 		"B_556_Box",
 		"B_556_Box",

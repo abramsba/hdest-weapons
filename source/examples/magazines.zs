@@ -15,7 +15,7 @@ class B556Mag : HDMagAmmo{
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "M4RCA0", "BB56A7A3", "B556Ammo", 1.7;
+		return (thismagamt > 0) ? "M4RCA0" : "M4RCB0", "BB56A7A3", "B556Ammo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -75,7 +75,7 @@ class BM249Mag : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "M24CA0", "BB56A7A3", "B556Ammo", 1.7;
+		return (thismagamt > 0) ? "M24CA0" : "M24CB0", "BB56A7A3", "B556Ammo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -118,7 +118,7 @@ class B9mm_MP5K_MAG : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "MP5CA0", "PBRSA0", "HDPistolAmmo", 1.7;
+		return (thismagamt > 0) ? "MP5CA0" : "MP5CB0", "PBRSA0", "HDPistolAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -181,7 +181,7 @@ class BFauxDrum : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "FOSCA0", "SHL1A0", "HDShellAmmo", 1.7;
+		return (thismagamt > 0) ? "FOSCA0" : "FOSCB0", "SHL1A0", "HDShellAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -227,7 +227,7 @@ class b762_m14_mag : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "M14CA0", "BF76A3A7", "B762x51Ammo", 1.7;
+		return (thismagamt > 0) ? "M14CA0" : "M14CB0", "BF76A3A7", "B762x51Ammo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -291,7 +291,7 @@ class GlockMagazine : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "GLKCA0", "PBRSA0", "HDPistolAmmo", 1.7;
+		return (thismagamt > 0) ? "GLKCA0" : "GLKCB0", "PBRSA0", "HDPistolAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -353,7 +353,7 @@ class M107Magazine : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "M17MA0", "BG50A7A3", "B50BMGAmmo", 1.7;
+		return (thismagamt > 0) ? "M17MA0" : "M17MB0", "BG50A7A3", "B50BMGAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -497,7 +497,7 @@ class BAK_545Mag : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "AK7CA0", "B54BA7A3", "B545Ammo", 1.7;
+		return (thismagamt > 0) ? "AK7CA0" : "AK7CB0", "B54BA7A3", "B545Ammo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -532,7 +532,7 @@ class BAKM_762Mag : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "AKMCA0", "B7SBA7A3", "B762SovAmmo", 1.7;
+		return (thismagamt > 0) ? "AKMCA0" : "AKMCB0", "B7SBA7A3", "B762SovAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {
@@ -556,7 +556,7 @@ class BAKM_762Mag : HDMagAmmo {
 
 class UziMagazine : HDMagAmmo {
 	default{
-		hdmagammo.maxperunit 30;
+		hdmagammo.maxperunit 32;
 		hdmagammo.roundtype "HDPistolAmmo";
 		hdmagammo.roundbulk c_van_9mm_bulk;
 		hdmagammo.magbulk c_uzi_mag_bulk;
@@ -568,7 +568,7 @@ class UziMagazine : HDMagAmmo {
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt){
-		return "UZICA0", "PBRSA0", "HDPistolAmmo", 1.7;
+		return (thismagamt > 0) ? "UZICA0" : "UZICB0", "PBRSA0", "HDPistolAmmo", 1.7;
 	}
 
 	override void GetItemsThatUseThis() {

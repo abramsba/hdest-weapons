@@ -29,7 +29,7 @@ class B_Uzi : BaseStandardRifle {
 		BHDWeapon.BWeaponBulk        c_uzi_bulk;
 		BHDWeapon.BMagazineBulk      c_uzi_mag_bulk;
 		BHDWeapon.BBulletBulk        c_van_9mm_bulk;
-		BHDWeapon.BMagazineCapacity  30;
+		BHDWeapon.BMagazineCapacity  32;
 		BHDWeapon.BarrelLength       10;
 		BHDWeapon.BarrelWidth        1;
 		BHDWeapon.BarrelDepth        3;
@@ -364,12 +364,8 @@ class B_Uzi : BaseStandardRifle {
 		else {
 			return "UZIPB0", 1.;
 		}
-	}
-	
+	}	
 }
-
-
-
 
 class UziSilencerOffset : BarrelOffset {
 	default {

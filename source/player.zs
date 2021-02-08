@@ -156,29 +156,29 @@ class PlayerEvents : EventHandler {
 		else if (e.Replacee is "ClipMagPickup" || e.Replacee is "ClipBoxPickup") {
 			e.Replacement = "RandomBryanPickup";
 		}
-		else if (e.Replacee is "DERPBot") {
-			e.Replacement = "TDerpBot";
-		}
-		else if (e.Replacee is "DERPUsable") {
+			else if (e.Replacee is "DERPUsable") {
 			e.Replacement = "TDERPUsable";
 		}
-		else if (e.Replacee is "EnemyDERP") {
-			e.Replacement = "EnemyTDERP";
-		}
-		else if (e.Replacee is "DERPDead") {
+			else if (e.Replacee is "DERPDead") {
 			e.Replacement = "TDERPDead";
 		}
-		else if (e.Replacee is "HERPBot") {
-			e.Replacement = "THerpBot";
+			else if (e.Replacee is "EnemyDERP") {
+			e.Replacement = "EnemyTDERP";
 		}
-		else if (e.Replacee is "HERPUsable") {
+			else if (e.Replacee is "DERPBot") {
+			e.Replacement = "TDerpBot";
+		}
+			else if (e.Replacee is "HERPUsable") {
 			e.Replacement = "THERPUsable";
 		}
-		else if (e.Replacee is "EnemyHERP") {
+			else if (e.Replacee is "BrokenHERP") {
+			e.Replacement = "BrokenTHERP";
+		}
+			else if (e.Replacee is "EnemyHERP") {
 			e.Replacement = "EnemyTHERP";
 		}
-		else if (e.Replacee is "BrokenHERP") {
-			e.Replacement = "BrokenTHERP";
+			else if (e.Replacee is "HERPBot") {
+			e.Replacement = "THerpBot";
 		}
 	}
 
@@ -471,6 +471,15 @@ class PlayerEvents : EventHandler {
 		else if (B_AI_Replace_Type == 6 && alreadyReplaced == false) {
 			replaceAllAI(e);
 		}
+		CVar ReplaceAmmoboxes = CVar.GetCVar("UaS_ReplaceAmmoboxes");
+		if (!ReplaceAmmoboxes) return;
+		if (e.Replacee is "B_556_Box") { e.Replacement = "UaS_556Box"; return; }
+		if (e.Replacee is "B_762_Box") { e.Replacement = "UaS_762Box"; return; }
+		if (e.Replacee is "B_545_Box") { e.Replacement = "UaS_545Box"; return; }
+		if (e.Replacee is "B_762sov_Box") { e.Replacement = "UaS_762SovBox"; return; }
+		if (e.Replacee is "B_50BMG_Box") { e.Replacement = "UaS_50BMGBox"; return; }
+//		if (e.Replacee is "BRocketPickup") { e.Replacement = "UaS_RPGBox"; return; }
+
 	}
 
 	void createLight(PlayerPawn pl) {

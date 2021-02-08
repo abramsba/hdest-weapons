@@ -39,7 +39,7 @@ class b_m14 : basestandardrifle {
 		BHDWeapon.BChamberSound      "weapons/m14/chamber";
 		BHDWeapon.BBoltForwardSound  "weapons/m14/boltback";
 		BHDWeapon.BBoltBackwardSound "weapons/m14/boltforward";
-		BHDWeapon.BClickSound        "weapons/m4/click";
+		BHDWeapon.BClickSound        "weapons/m14/click";
 		BHDWeapon.BLoadSound         "weapons/m14/clipinsert";
 		BHDWeapon.BUnloadSound       "weapons/m14/clipeject";
 
