@@ -888,43 +888,34 @@ class THERPUsable:HDWeapon{
 		..WEPHELP_ZOOM.."  Manual firing"
 		;
 	}
+
 	static int backpackrepairs(actor owner,hdbackpack bp){
 		if(!owner||!bp)return 0;
-		int herpindex=bp.invclasses.find("therpusable");
+		StorageItem si=bp.Storage.Find('therpusable');
 		int fixbonus=0;
-		if(herpindex<bp.invclasses.size()){
-			array<string> inbp;
-			bp.amounts[herpindex].split(inbp," ");
-			for(int i=0;i<inbp.size();i+=(HDWEP_STATUSSLOTS+1)){
-				int inbpi=inbp[i].toint();
-				if(inbpi&HERPF_BROKEN){
-					if(!random(0,7-fixbonus)){
+		if (si){
+			for(int i=0;si.Amounts.Size()>0&&i<si.Amounts[0];){
+				if (si.WeaponStatus[HDWEP_STATUSSLOTS*i]&HERPF_BROKEN){
+					if (!random(0,7-fixbonus)){
 						//fix
-						inbpi&=~HERPF_BROKEN;
-						inbp[i]=""..inbpi;
-						if(fixbonus>0)fixbonus--;
+						si.WeaponStatus[HDWEP_STATUSSLOTS*i]&=~HERPF_BROKEN;
+						if (fixbonus>0)fixbonus--;
 						owner.A_Log("You repair one of the broken T.H.E.R.P.s in your backpack.",true);
 					}else if(!random(0,7)){
 						fixbonus++;
 						//delete and restart
-						for(int j=0;j<(HDWEP_STATUSSLOTS+1);j++){
-							inbp.delete(i);
-						}
+						bp.Storage.RemoveItem(si,null,null,index:i);
 						i=0;
 						owner.A_Log("You destroy one of the broken T.H.E.R.P.s in your backpack in your repair efforts.",true);
+						continue;
 					}
 				}
+				i++;
 			}
-			string replaceamts="";
-			for(int i=0;i<inbp.size();i++){
-				if(i)replaceamts=replaceamts.." "..inbp[i];
-				else replaceamts=inbp[i];
-			}
-			bp.amounts[herpindex]=replaceamts;
-			bp.updatemessage(bp.index);
 		}
 		return fixbonus;
 	}
+
 
 
 	action void A_RepairAttempt(){

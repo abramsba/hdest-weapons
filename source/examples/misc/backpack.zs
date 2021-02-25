@@ -33,10 +33,11 @@ class BryanWildBackpack : IdleDummy {
 			bool rng = score > target;
 			if (rng) {
 				int quantity = random(1, dat.quantity);
-				for (int c = 0; c < quantity; c++) {
-					Inventory newItem = Inventory(backpack.Spawn(dat.clsName, self.pos, ALLOW_REPLACE));
-					backpack.itemtobackpack(newItem);
-				}
+				backpack.Storage.AddAmount(dat.clsName, quantity, flags: 0);
+				//for (int c = 0; c < quantity; c++) {
+					//Inventory newItem = Inventory(backpack.Spawn(dat.clsName, self.pos, ALLOW_REPLACE));
+					//backpack.itemtobackpack(newItem);
+				//}
 			}
 		}
 	}

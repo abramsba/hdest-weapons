@@ -458,44 +458,35 @@ class TDERPUsable:HDWeapon{
 		invoker.weaponstatus[DERPS_USEOFFS]+=ofs;
 	}
 
-
 	static int backpackrepairs(actor owner,hdbackpack bp){
 		if(!owner||!bp)return 0;
-		int derpindex=bp.invclasses.find("TDERPUsable");
+		StorageItem si=bp.Storage.Find('TDERPUsable');
 		int fixbonus=0;
-		if(derpindex<bp.invclasses.size()){
-			array<string> inbp;
-			bp.amounts[derpindex].split(inbp," ");
-			for(int i=0;i<inbp.size();i+=(HDWEP_STATUSSLOTS+1)){
-				int inbpi=inbp[i].toint();
-				if(inbpi&DERPF_BROKEN){
-					if(!random(0,6-fixbonus)){
+		if (si){
+			// [Ace] The original implementation had a bug (?) where if you had two DERPS and the first one was destroyed for parts, the second one would be skipped.
+			// Same thing with the H.E.R.P.
+			for(int i=0;si.Amounts.Size()>0&&i<si.Amounts[0];){
+				if (si.WeaponStatus[HDWEP_STATUSSLOTS*i]&DERPF_BROKEN){
+					if (!random(0,6-fixbonus)){
 						//fix
-						inbpi&=~DERPF_BROKEN;
-						inbp[i]=""..inbpi;
-						if(fixbonus>0)fixbonus--;
-						owner.A_Log("You repair one of the broken D.E.R.P.s in your backpack.",true);
+						si.WeaponStatus[HDWEP_STATUSSLOTS*i]&=~DERPF_BROKEN;
+						if (fixbonus>0)fixbonus--;
+						owner.A_Log("You repair one of the broken T.D.E.R.P.s in your backpack.",true);
 					}else if(!random(0,6)){
 						fixbonus++;
 						//delete and restart
-						for(int j=0;j<(HDWEP_STATUSSLOTS+1);j++){
-							inbp.delete(i);
-						}
+						bp.Storage.RemoveItem(si,null,null,index:i);
 						i=0;
-						owner.A_Log("You destroy one of the broken D.E.R.P.s in your backpack in your repair efforts.",true);
+						owner.A_Log("You destroy one of the broken T.D.E.R.P.s in your backpack in your repair efforts.",true);
+						continue;
 					}
 				}
+				i++;
 			}
-			string replaceamts="";
-			for(int i=0;i<inbp.size();i++){
-				if(i)replaceamts=replaceamts.." "..inbp[i];
-				else replaceamts=inbp[i];
-			}
-			bp.amounts[derpindex]=replaceamts;
-			bp.updatemessage(bp.index);
 		}
 		return fixbonus;
 	}
+
 	override void consolidate(){
 		if(!owner)return;
 		int fixbonus=backpackrepairs(owner,hdbackpack(owner.findinventory("HDBackpack")));
