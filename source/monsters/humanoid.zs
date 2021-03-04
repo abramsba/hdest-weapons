@@ -484,27 +484,28 @@ class HumanoidBase : ZombieStormtrooper {
 					return ResolveState("Dead");
 				return ResolveState(NULL);
 			}
+			#### MN 5;
 			Wait;
 
 		XXXDeath:
-			#### M 5;
-			#### N 5 A_XScream();
-			#### OPQRST 5;
-			#### T 0 A_Jump(256, "Xdead");
+			#### O 5;
+			#### P 5 A_XScream();
+			#### QRSTUV 5;
+			#### W 0 A_Jump(256, "Xdead");
 
 		XDeath:
-			#### M 5;
-			#### N 5{
+			#### O 5;
+			#### P 5{
 				spawn("MegaBloodSplatter",pos+(0,0,34),ALLOW_REPLACE);
 				A_XScream();
 			}
-			#### OP 5 spawn("MegaBloodSplatter",pos+(0,0,34),ALLOW_REPLACE);
-			#### QRST 5;
-			#### T 0 A_Jump(256, "XDead");
+			#### QR 5 spawn("MegaBloodSplatter",pos+(0,0,34),ALLOW_REPLACE);
+			#### STUV 5;
+			#### W 0 A_Jump(256, "XDead");
 
 		xdead:
-			#### T 3 canraise A_JumpIf(abs(vel.z) < 2., 1);
-			#### U 5 canraise A_JumpIf(abs(vel.z) >= 2., "xdead");
+			#### V 3 canraise A_JumpIf(abs(vel.z) < 2., 1);
+			#### W 5 canraise A_JumpIf(abs(vel.z) >= 2., "xdead");
 			wait;
 
 		raise:
