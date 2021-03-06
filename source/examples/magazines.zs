@@ -45,19 +45,11 @@ class B556MagEmpty:IdleDummy{
 	}
 }
 
-class B556MagEmpty2 : B556Mag {
-	default { -hdpickup.fitsinbackpack }
-	states {
-		spawn:
-			TNT1 A 0 NoDelay {
-				let mag = B556Mag(Spawn("B556mag", pos, ALLOW_REPLACE));
-				if (!mag) {
-					return;
-				}
-				mag.SyncAmount();
-				mag.mags[0] = 0;
-			}
-			stop;
+class B556MagEmpty2 : IdleDummy {
+	override void postbeginplay(){
+		super.postbeginplay();
+		HDMagAmmo.SpawnMag(self,"B556Mag",0);
+		destroy();
 	}
 }
 
@@ -149,21 +141,11 @@ class BMp5MagEmpty:IdleDummy{
 	}
 }
 
-class BMp5MagEmpty2 : B9mm_MP5K_MAG {
-	default {
-		-hdpickup.fitsinbackpack
-	}
-	states {
-		spawn:
-			TNT1 A 0 NoDelay {
-				let mag = B9mm_MP5K_MAG(Spawn("B9mm_MP5K_MAG", pos, ALLOW_REPLACE));
-				if (!mag) {
-					return;
-				}
-				mag.SyncAmount();
-				mag.mags[0] = 0;
-			}
-			stop;
+class BMp5MagEmpty2:IdleDummy {
+	override void postbeginplay(){
+		super.postbeginplay();
+		HDMagAmmo.SpawnMag(self,"B9mm_MP5K_MAG",0);
+		destroy();
 	}
 }
 
@@ -248,27 +230,16 @@ class b762_m14_mag : HDMagAmmo {
 	}
 }
 
-class B762MagEmpty2 : b762_m14_mag {
-	default {
-		-hdpickup.fitsinbackpack
-	}
-	states {
-		spawn:
-			TNT1 A 0 NoDelay {
-				let mag = B762MagEmpty2(Spawn("B762MagEmpty2", pos, ALLOW_REPLACE));
-				if (!mag) {
-					return;
-				}
-				mag.SyncAmount();
-				mag.mags[0] = 0;
-			}
-			stop;
+class B762MagEmpty2 : IdleDummy {
+	override void postbeginplay(){
+		super.postbeginplay();
+		HDMagAmmo.SpawnMag(self,"b762_m14_mag",0);
+		destroy();
 	}
 }
 
 
 class B762MagEmpty:IdleDummy{
-
 	override void postbeginplay(){
 		super.postbeginplay();
 		HDMagAmmo.SpawnMag(self,"b762_m14_mag",0);
@@ -320,21 +291,11 @@ class BGlockMagEmpty:IdleDummy{
 	}
 }
 
-class BGlockMagEmpty2 : GlockMagazine {
-	default {
-		-hdpickup.fitsinbackpack
-	}
-	states {
-		spawn:
-			TNT1 A 0 NoDelay {
-				let mag = GlockMagazine(Spawn("GlockMagazine", pos, ALLOW_REPLACE));
-				if (!mag) {
-					return;
-				}
-				mag.SyncAmount();
-				mag.mags[0] = 0;
-			}
-			stop;
+class BGlockMagEmpty2 : IdleDummy {
+	override void postbeginplay(){
+		super.postbeginplay();
+		HDMagAmmo.SpawnMag(self,"GlockMagazine",0);
+		destroy();
 	}
 }
 
